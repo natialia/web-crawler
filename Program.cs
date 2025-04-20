@@ -1,25 +1,34 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
+using WebCrawler.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.WebHost.UseKestrel().UseUrls("http://0.0.0.0:80");
+
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "WebCrawler API",
+        Version = "v1",
+        Description = "Swagger documentation for WebCrawler API"
+    });
+});
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+// Enable Swagger always
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
-app.UseHttpsRedirection();
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebCrawler API v1");
+    c.RoutePrefix = "swagger";
+});
 
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();

@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "4XFeGiYot8187FVAqw6BuSPSIL64KVuMjD42/MEnQ8g=",
+  "Source": "WebCrawler",
+  "BasePath": "_content/WebCrawler",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
