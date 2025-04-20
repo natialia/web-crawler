@@ -1,13 +1,16 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-using WebCrawler.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.WebHost.UseKestrel().UseUrls("http://0.0.0.0:80");
 
-
 builder.Services.AddControllers();
+
+// Register EF Core with PostgreSQL
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("Default")));
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
