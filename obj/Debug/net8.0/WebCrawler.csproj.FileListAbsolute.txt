@@ -1,5 +1,6 @@
 C:\Users\NATAG\OneDrive\Dokumente\FH Stuff\5. Sem\INNO3\WebCrawler\WebCrawler\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\NATAG\OneDrive\Dokumente\FH Stuff\5. Sem\INNO3\WebCrawler\WebCrawler\bin\Debug\net8.0\appsettings.json
+C:\Users\NATAG\OneDrive\Dokumente\FH Stuff\5. Sem\INNO3\WebCrawler\WebCrawler\bin\Debug\net8.0\WebCrawler.staticwebassets.runtime.json
 C:\Users\NATAG\OneDrive\Dokumente\FH Stuff\5. Sem\INNO3\WebCrawler\WebCrawler\bin\Debug\net8.0\WebCrawler.staticwebassets.endpoints.json
 C:\Users\NATAG\OneDrive\Dokumente\FH Stuff\5. Sem\INNO3\WebCrawler\WebCrawler\bin\Debug\net8.0\WebCrawler.exe
 C:\Users\NATAG\OneDrive\Dokumente\FH Stuff\5. Sem\INNO3\WebCrawler\WebCrawler\bin\Debug\net8.0\WebCrawler.deps.json

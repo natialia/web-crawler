@@ -1,0 +1,16 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/WebCrawler/ui/index.dv84udfkh7.html">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\ui\index.html'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"dv84udfkh7"},{"Name":"integrity","Value":"sha256-F9hVW0SlHUKRbAM1fFzsZoeezb35Y8ghqr9YkYuGgQE="},{"Name":"label","Value":"_content/WebCrawler/ui/index.html"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"4651"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022F9hVW0SlHUKRbAM1fFzsZoeezb35Y8ghqr9YkYuGgQE=\u0022"},{"Name":"Last-Modified","Value":"Mon, 21 Apr 2025 01:45:19 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WebCrawler/ui/index.html">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\ui\index.html'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-F9hVW0SlHUKRbAM1fFzsZoeezb35Y8ghqr9YkYuGgQE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"4651"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022F9hVW0SlHUKRbAM1fFzsZoeezb35Y8ghqr9YkYuGgQE=\u0022"},{"Name":"Last-Modified","Value":"Mon, 21 Apr 2025 01:45:19 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

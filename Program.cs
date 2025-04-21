@@ -37,5 +37,8 @@ app.UseSwaggerUI(c =>
 app.UseAuthorization();
 app.MapControllers();
 
+app.UseDefaultFiles(); // sucht automatisch nach index.html
+app.UseStaticFiles();  // macht wwwroot verfügbar
+
 
 app.Run();

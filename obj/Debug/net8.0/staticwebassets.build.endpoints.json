@@ -1,5 +1,88 @@
 {
   "Version": 1,
   "ManifestType": "Build",
-  "Endpoints": []
+  "Endpoints": [
+    {
+      "Route": "ui/index.dv84udfkh7.html",
+      "AssetFile": "ui/index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4651"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"F9hVW0SlHUKRbAM1fFzsZoeezb35Y8ghqr9YkYuGgQE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 21 Apr 2025 01:45:19 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dv84udfkh7"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-F9hVW0SlHUKRbAM1fFzsZoeezb35Y8ghqr9YkYuGgQE="
+        },
+        {
+          "Name": "label",
+          "Value": "ui/index.html"
+        }
+      ]
+    },
+    {
+      "Route": "ui/index.html",
+      "AssetFile": "ui/index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4651"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"F9hVW0SlHUKRbAM1fFzsZoeezb35Y8ghqr9YkYuGgQE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 21 Apr 2025 01:45:19 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-F9hVW0SlHUKRbAM1fFzsZoeezb35Y8ghqr9YkYuGgQE="
+        }
+      ]
+    }
+  ]
 }

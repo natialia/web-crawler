@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebCrawler - Auth & Profil</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+
+        input, button {
+            display: block;
+            margin-bottom: 1rem;
+            width: 100%;
+            padding: 0.5rem;
+        }
+
+        label {
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+
+        #section > div {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>WebCrawler Mini UI</h1>
+
+    <div id="section">
+        <!-- REGISTRIERUNG -->
+        <div>
+            <h2>Registrieren</h2>
+            <label for="regNick">Nickname</label>
+            <input type="text" id="regNick" />
+            <label for="regMail">Email</label>
+            <input type="email" id="regMail" />
+            <label for="regPass">Passwort</label>
+            <input type="password" id="regPass" />
+            <button onclick="register()">Registrieren</button>
+        </div>
+
+        <!-- LOGIN -->
+        <div>
+            <h2>Login</h2>
+            <label for="loginInput">Email oder Nickname</label>
+            <input type="text" id="loginInput" />
+            <label for="loginPass">Passwort</label>
+            <input type="password" id="loginPass" />
+            <button onclick="login()">Login</button>
+        </div>
+
+        <!-- PASSWORT VERGESSEN -->
+        <div>
+            <h2>Passwort vergessen</h2>
+            <label for="resetEmail">Email</label>
+            <input type="email" id="resetEmail" />
+            <button onclick="forgotPassword()">Reset-Link anfordern</button>
+        </div>
+
+
+        <!-- PROFIL -->
+        <div id="profileForm" style="display:none;">
+            <h2>Profil bearbeiten</h2>
+            <label for="nickname">Nickname</label>
+            <input type="text" id="nickname" />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" />
+
+            <button onclick="updateProfile()">Profil speichern</button>
+        </div>
+    </div>
+
+    <p id="status"></p>
+
+    <script>
+    const apiBase = "http://localhost:8080/api/User";
+    let currentUserId = null;
+
+    async function register() {
+      const nickname = document.getElementById("regNick").value;
+      const email = document.getElementById("regMail").value;
+      const password = document.getElementById("regPass").value;
+
+      const res = await fetch(`${apiBase}/register`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ nickname, email, passwordHash: password })
+      });
+
+      if (res.ok) {
+        const newUser = await res.json();
+        document.getElementById("status").innerText = `Registrierung erfolgreich! Deine User-ID: ${newUser.id}`;
+      } else {
+        const error = await res.text();
+        document.getElementById("status").innerText = `Fehler bei Registrierung: ${error}`;
+      }
+    }
+
+    async function login() {
+        const emailOrNickname = document.getElementById("loginInput").value;
+        const password = document.getElementById("loginPass").value;
+
+        const res = await fetch(`${apiBase}/login`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ emailOrNickname, password })
+        });
+
+
+      if (res.ok) {
+        const data = await res.json();
+        currentUserId = data.id;
+        document.getElementById("nickname").value = data.nickname;
+        document.getElementById("email").value = email;
+        document.getElementById("profileForm").style.display = "block";
+        document.getElementById("status").innerText = `Eingeloggt als ${data.nickname}`;
+      } else {
+        const error = await res.text();
+        document.getElementById("status").innerText = `Login fehlgeschlagen: ${error}`;
+      }
+    }
+
+        async function forgotPassword() {
+            const email = document.getElementById("resetEmail").value;
+
+            const res = await fetch(`${apiBase}/forgot-password`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(email)
+            });
+
+            if (res.ok) {
+                const data = await res.json();
+                document.getElementById("status").innerText = `Reset-Link (simuliert): ${data.Link} (gültig bis ${data.Expiry})`;
+            } else {
+                const error = await res.text();
+                document.getElementById("status").innerText = `Fehler: ${error}`;
+            }
+        }
+
+
+    async function updateProfile() {
+      const nickname = document.getElementById("nickname").value;
+      const email = document.getElementById("email").value;
+
+      const res = await fetch(`${apiBase}/profile/${currentUserId}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ nickname, email })
+      });
+
+      if (res.ok) {
+        document.getElementById("status").innerText = "Profil gespeichert.";
+      } else {
+        const error = await res.text();
+        document.getElementById("status").innerText = `Fehler: ${error}`;
+      }
+    }
+    </script>
+</body>
+</html>

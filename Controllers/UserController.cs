@@ -40,6 +40,19 @@ namespace WebCrawler.Controllers
             return Ok(user);
         }
 
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] LoginDto dto)
+        {
+            var user = await _context.Users
+                .FirstOrDefaultAsync(u =>
+                    u.Email == dto.EmailOrNickname || u.Nickname == dto.EmailOrNickname);
+
+            if (user == null || user.PasswordHash != dto.Password)
+                return Unauthorized("Invalid credentials.");
+
+            return Ok(new { id = user.Id, nickname = user.Nickname });
+        }
+
         [HttpPost("register")]
         public async Task<IActionResult> Register(User user)
         {
@@ -78,10 +91,15 @@ namespace WebCrawler.Controllers
                 return NotFound("Email not registered.");
 
             var token = Guid.NewGuid().ToString();
-            var expiry = DateTime.UtcNow.AddMinutes(1); // valid for 60 seconds
+            var expiry = DateTime.UtcNow.AddMinutes(1); // 60 Sekunden gültig
 
-            // In production, you'd send an email here
-            return Ok(new { Link = $"https://yourfrontend/reset-password?token={token}", Expiry = expiry });
+            // Simulierte Antwort
+            return Ok(new
+            {
+                Message = "Simulierter Reset-Link erstellt.",
+                Link = $"http://localhost:8080/ui/reset-password.html?token={token}",
+                Expiry = expiry
+            });
         }
 
         [HttpPut("{id}")]
@@ -115,8 +133,17 @@ namespace WebCrawler.Controllers
             if (user == null)
                 return NotFound();
 
+            // Email-Format prüfen
             if (!IsValidEmail(updatedUser.Email))
                 return BadRequest("Invalid email format.");
+
+            // Email darf nicht doppelt vorkommen
+            if (await _context.Users.AnyAsync(u => u.Email == updatedUser.Email && u.Id != id))
+                return Conflict("Email already exists.");
+
+            // Nickname darf auch nicht doppelt sein
+            if (await _context.Users.AnyAsync(u => u.Nickname == updatedUser.Nickname && u.Id != id))
+                return Conflict("Nickname already exists.");
 
             user.Nickname = updatedUser.Nickname;
             user.Email = updatedUser.Email;

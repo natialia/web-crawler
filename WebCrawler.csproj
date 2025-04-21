@@ -22,4 +22,8 @@
     <EditorConfigFiles Remove="C:\Users\NATAG\OneDrive\Dokumente\FH Stuff\5. Sem\INNO3\WebCrawler\WebCrawler\.editorconfig" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\ui\index.html" />
+  </ItemGroup>
+
 </Project>

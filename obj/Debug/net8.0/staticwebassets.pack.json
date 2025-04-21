@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\ui\\index.html",
+      "PackagePath": "staticwebassets\\ui\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebCrawler.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebCrawler.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.WebCrawler.props",
+      "PackagePath": "build\\WebCrawler.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.WebCrawler.props",
+      "PackagePath": "buildMultiTargeting\\WebCrawler.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.WebCrawler.props",
+      "PackagePath": "buildTransitive\\WebCrawler.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
