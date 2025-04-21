@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using WebCrawler.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
