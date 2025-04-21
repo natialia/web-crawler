@@ -1,11 +1,8 @@
-﻿namespace WebCrawler.Models
+﻿public class SearchHistory
 {
-    public class SearchHistory
-    {
-        public int Id { get; set; }
-        public string Url { get; set; } = string.Empty;
-        public DateTime SearchedAt { get; set; }
-        public List<FoundPdf> FoundPdfs { get; set; } = new();
-    }
-
+    public int Id { get; set; }
+    public string Url { get; set; } = string.Empty;
+    public DateTime Date { get; set; } = DateTime.UtcNow;
+    public List<string> PdfLinks { get; set; } = new();
+    public int UserId { get; set; }
 }

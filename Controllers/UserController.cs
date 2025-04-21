@@ -43,14 +43,14 @@ namespace WebCrawler.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginDto dto)
         {
-            var user = await _context.Users
-                .FirstOrDefaultAsync(u =>
-                    u.Email == dto.EmailOrNickname || u.Nickname == dto.EmailOrNickname);
+            var user = await _context.Users.FirstOrDefaultAsync(u =>
+                (u.Email == dto.Email || u.Nickname == dto.Nickname) &&
+                u.PasswordHash == dto.Password);
 
-            if (user == null || user.PasswordHash != dto.Password)
+            if (user == null)
                 return Unauthorized("Invalid credentials.");
 
-            return Ok(new { id = user.Id, nickname = user.Nickname });
+            return Ok(new { id = user.Id, nickname = user.Nickname, email = user.Email });
         }
 
         [HttpPost("register")]

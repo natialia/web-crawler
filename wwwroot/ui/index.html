@@ -11,7 +11,7 @@
             margin: 2rem auto;
         }
 
-        input, button {
+        input, button, textarea {
             display: block;
             margin-bottom: 1rem;
             width: 100%;
@@ -28,6 +28,10 @@
             padding: 1rem;
             border: 1px solid #ccc;
             border-radius: 8px;
+        }
+
+        ul {
+            padding-left: 1.5rem;
         }
     </style>
 </head>
@@ -55,16 +59,8 @@
             <label for="loginPass">Passwort</label>
             <input type="password" id="loginPass" />
             <button onclick="login()">Login</button>
+            <button id="crawlBtn" onclick="startCrawl()" style="display:none;">Crawling starten</button>
         </div>
-
-        <!-- PASSWORT VERGESSEN -->
-        <div>
-            <h2>Passwort vergessen</h2>
-            <label for="resetEmail">Email</label>
-            <input type="email" id="resetEmail" />
-            <button onclick="forgotPassword()">Reset-Link anfordern</button>
-        </div>
-
 
         <!-- PROFIL -->
         <div id="profileForm" style="display:none;">
@@ -77,94 +73,142 @@
 
             <button onclick="updateProfile()">Profil speichern</button>
         </div>
+
+        <!-- HISTORY -->
+        <div id="historySection" style="display:none;">
+            <h2>Suchhistorie</h2>
+            <ul id="historyList"></ul>
+        </div>
+
+        <!-- SUCHEN -->
+        <div id="searchSection" style="display:none;">
+            <h2>Wortsuche in PDFs</h2>
+            <label for="searchWord">Suchwort</label>
+            <input type="text" id="searchWord" />
+            <button onclick="searchWordInPdfs()">Suchen</button>
+            <ul id="searchResults"></ul>
+        </div>
     </div>
 
     <p id="status"></p>
 
     <script>
-    const apiBase = "http://localhost:8080/api/User";
-    let currentUserId = null;
+        const apiBase = "http://localhost:8080/api/User";
+        const crawlApi = "http://localhost:8080/api/Crawler";
+        let currentUserId = null;
 
-    async function register() {
-      const nickname = document.getElementById("regNick").value;
-      const email = document.getElementById("regMail").value;
-      const password = document.getElementById("regPass").value;
+        async function register() {
+            const nickname = document.getElementById("regNick").value;
+            const email = document.getElementById("regMail").value;
+            const password = document.getElementById("regPass").value;
 
-      const res = await fetch(`${apiBase}/register`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ nickname, email, passwordHash: password })
-      });
-
-      if (res.ok) {
-        const newUser = await res.json();
-        document.getElementById("status").innerText = `Registrierung erfolgreich! Deine User-ID: ${newUser.id}`;
-      } else {
-        const error = await res.text();
-        document.getElementById("status").innerText = `Fehler bei Registrierung: ${error}`;
-      }
-    }
-
-    async function login() {
-        const emailOrNickname = document.getElementById("loginInput").value;
-        const password = document.getElementById("loginPass").value;
-
-        const res = await fetch(`${apiBase}/login`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ emailOrNickname, password })
-        });
-
-
-      if (res.ok) {
-        const data = await res.json();
-        currentUserId = data.id;
-        document.getElementById("nickname").value = data.nickname;
-        document.getElementById("email").value = email;
-        document.getElementById("profileForm").style.display = "block";
-        document.getElementById("status").innerText = `Eingeloggt als ${data.nickname}`;
-      } else {
-        const error = await res.text();
-        document.getElementById("status").innerText = `Login fehlgeschlagen: ${error}`;
-      }
-    }
-
-        async function forgotPassword() {
-            const email = document.getElementById("resetEmail").value;
-
-            const res = await fetch(`${apiBase}/forgot-password`, {
+            const res = await fetch(`${apiBase}/register`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(email)
+                body: JSON.stringify({ nickname, email, passwordHash: password })
+            });
+
+            if (res.ok) {
+                const newUser = await res.json();
+                document.getElementById("status").innerText = `Registrierung erfolgreich! Deine User-ID: ${newUser.id}`;
+            } else {
+                const error = await res.text();
+                document.getElementById("status").innerText = `Fehler bei Registrierung: ${error}`;
+            }
+        }
+
+        async function login() {
+            const input = document.getElementById("loginInput").value;
+            const password = document.getElementById("loginPass").value;
+
+            const res = await fetch(`${apiBase}/login`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email: input, nickname: input, password })
             });
 
             if (res.ok) {
                 const data = await res.json();
-                document.getElementById("status").innerText = `Reset-Link (simuliert): ${data.Link} (gültig bis ${data.Expiry})`;
+                currentUserId = data.id;
+                document.getElementById("nickname").value = data.nickname;
+                document.getElementById("email").value = data.email;
+                document.getElementById("profileForm").style.display = "block";
+                document.getElementById("crawlBtn").style.display = "inline-block";
+                document.getElementById("historySection").style.display = "block";
+                document.getElementById("searchSection").style.display = "block";
+                document.getElementById("status").innerText = `Eingeloggt als ${data.nickname}`;
+                loadHistory();
+            } else {
+                const error = await res.text();
+                document.getElementById("status").innerText = `Login fehlgeschlagen: ${error}`;
+            }
+        }
+
+        async function updateProfile() {
+            const nickname = document.getElementById("nickname").value;
+            const email = document.getElementById("email").value;
+
+            const res = await fetch(`${apiBase}/profile/${currentUserId}`, {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ nickname, email })
+            });
+
+            if (res.ok) {
+                document.getElementById("status").innerText = "Profil gespeichert.";
             } else {
                 const error = await res.text();
                 document.getElementById("status").innerText = `Fehler: ${error}`;
             }
         }
 
+        async function startCrawl() {
+            const url = prompt("Gib die Start-URL ein:");
+            const depth = prompt("Gib die Tiefe (1–3) ein:") || 1;
 
-    async function updateProfile() {
-      const nickname = document.getElementById("nickname").value;
-      const email = document.getElementById("email").value;
+            const res = await fetch(`${crawlApi}/start?url=${encodeURIComponent(url)}&depth=${depth}&userId=${currentUserId}`);
+            const result = await res.json();
 
-      const res = await fetch(`${apiBase}/profile/${currentUserId}`, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ nickname, email })
-      });
+            if (res.ok) {
+                document.getElementById("status").innerText = `✅ Crawling abgeschlossen. Gefundene PDFs: ${result.anzahlPDFs || result.anzahl || 0}`;
+                loadHistory();
+            } else {
+                document.getElementById("status").innerText = `❌ Fehler: ${await res.text()}`;
+            }
+        }
 
-      if (res.ok) {
-        document.getElementById("status").innerText = "Profil gespeichert.";
-      } else {
-        const error = await res.text();
-        document.getElementById("status").innerText = `Fehler: ${error}`;
-      }
-    }
+        async function loadHistory() {
+            const res = await fetch(`${apiBase}/profile/${currentUserId}/history`);
+            const history = await res.json();
+            const list = document.getElementById("historyList");
+            list.innerHTML = "";
+
+            history.forEach(entry => {
+                const li = document.createElement("li");
+                li.textContent = `${entry.date}: ${entry.url}`;
+                list.appendChild(li);
+            });
+        }
+
+        async function searchWordInPdfs() {
+            const word = document.getElementById("searchWord").value;
+            const res = await fetch(`${apiBase}/search-topword?word=${encodeURIComponent(word)}&userId=${currentUserId}`);
+
+            const results = await res.json();
+            const list = document.getElementById("searchResults");
+            list.innerHTML = "";
+
+            if (results.length === 0) {
+                list.innerHTML = `<li>Kein Treffer gefunden.</li>`;
+                return;
+            }
+
+            results.forEach(doc => {
+                const li = document.createElement("li");
+                li.textContent = ` ${doc.fileName} (${doc.count}x)`;
+                list.appendChild(li);
+            });
+        }
     </script>
 </body>
 </html>
