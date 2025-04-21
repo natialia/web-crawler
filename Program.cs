@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using WebCrawler.Data;
+using WebCrawler.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -35,4 +36,6 @@ app.UseSwaggerUI(c =>
 
 app.UseAuthorization();
 app.MapControllers();
+
+
 app.Run();

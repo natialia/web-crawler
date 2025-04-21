@@ -130,7 +130,6 @@ C:\Users\NATAG\OneDrive\Dokumente\FH Stuff\5. Sem\INNO3\WebCrawler\WebCrawler\ob
 C:\Users\NATAG\OneDrive\Dokumente\FH Stuff\5. Sem\INNO3\WebCrawler\WebCrawler\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.WebCrawler.props
 C:\Users\NATAG\OneDrive\Dokumente\FH Stuff\5. Sem\INNO3\WebCrawler\WebCrawler\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.WebCrawler.props
 C:\Users\NATAG\OneDrive\Dokumente\FH Stuff\5. Sem\INNO3\WebCrawler\WebCrawler\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\NATAG\OneDrive\Dokumente\FH Stuff\5. Sem\INNO3\WebCrawler\WebCrawler\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\NATAG\OneDrive\Dokumente\FH Stuff\5. Sem\INNO3\WebCrawler\WebCrawler\obj\Debug\net8.0\WebCrawler.csproj.Up2Date
 C:\Users\NATAG\OneDrive\Dokumente\FH Stuff\5. Sem\INNO3\WebCrawler\WebCrawler\obj\Debug\net8.0\WebCrawler.dll
 C:\Users\NATAG\OneDrive\Dokumente\FH Stuff\5. Sem\INNO3\WebCrawler\WebCrawler\obj\Debug\net8.0\refint\WebCrawler.dll

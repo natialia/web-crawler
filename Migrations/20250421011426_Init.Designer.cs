@@ -12,7 +12,7 @@ using WebCrawler.Data;
 namespace WebCrawler.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250420213439_Init")]
+    [Migration("20250421011426_Init")]
     partial class Init
     {
         /// <inheritdoc />
