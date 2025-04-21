@@ -9,6 +9,7 @@
             font-family: sans-serif;
             max-width: 600px;
             margin: 2rem auto;
+            position: relative;
         }
 
         input, button, textarea {
@@ -33,14 +34,45 @@
         ul {
             padding-left: 1.5rem;
         }
+
+        .hidden {
+            display: none;
+        }
+
+        .top-right {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+            .top-right button {
+                width: auto;
+                padding: 0.4rem 0.8rem;
+            }
     </style>
 </head>
 <body>
     <h1>WebCrawler Mini UI</h1>
+    <div class="top-right">
+        <button id="profileToggleBtn" class="hidden" onclick="toggleVisibility('profileForm')">Profil bearbeiten</button>
+        <button id="logoutBtn" class="hidden" onclick="logout()">Logout</button>
+    </div>
 
     <div id="section">
+        <!-- LOGIN -->
+        <div id="loginSection">
+            <h2>Login</h2>
+            <label for="loginInput">Email oder Nickname</label>
+            <input type="text" id="loginInput" />
+            <label for="loginPass">Passwort</label>
+            <input type="password" id="loginPass" />
+            <button onclick="login()">Login</button>
+        </div>
+
         <!-- REGISTRIERUNG -->
-        <div>
+        <div id="registerSection" class="hidden">
             <h2>Registrieren</h2>
             <label for="regNick">Nickname</label>
             <input type="text" id="regNick" />
@@ -51,19 +83,10 @@
             <button onclick="register()">Registrieren</button>
         </div>
 
-        <!-- LOGIN -->
-        <div>
-            <h2>Login</h2>
-            <label for="loginInput">Email oder Nickname</label>
-            <input type="text" id="loginInput" />
-            <label for="loginPass">Passwort</label>
-            <input type="password" id="loginPass" />
-            <button onclick="login()">Login</button>
-            <button id="crawlBtn" onclick="startCrawl()" style="display:none;">Crawling starten</button>
-        </div>
+        <button id="registerToggleBtn" onclick="toggleVisibility('registerSection')">Registrieren anzeigen</button>
 
         <!-- PROFIL -->
-        <div id="profileForm" style="display:none;">
+        <div id="profileForm" class="hidden">
             <h2>Profil bearbeiten</h2>
             <label for="nickname">Nickname</label>
             <input type="text" id="nickname" />
@@ -74,19 +97,26 @@
             <button onclick="updateProfile()">Profil speichern</button>
         </div>
 
-        <!-- HISTORY -->
-        <div id="historySection" style="display:none;">
-            <h2>Suchhistorie</h2>
-            <ul id="historyList"></ul>
+        <!-- Buttons für weitere Funktionen -->
+        <div id="featureButtons" class="hidden">
+            <button onclick="startCrawl()">Crawling starten</button>
+            <button onclick="toggleVisibility('searchSection')">Wortsuche anzeigen</button>
+            <button onclick="toggleVisibility('historySection')">Suchhistorie anzeigen</button>
         </div>
 
         <!-- SUCHEN -->
-        <div id="searchSection" style="display:none;">
+        <div id="searchSection" class="hidden">
             <h2>Wortsuche in PDFs</h2>
             <label for="searchWord">Suchwort</label>
             <input type="text" id="searchWord" />
             <button onclick="searchWordInPdfs()">Suchen</button>
             <ul id="searchResults"></ul>
+        </div>
+
+        <!-- HISTORY -->
+        <div id="historySection" class="hidden">
+            <h2>Suchhistorie</h2>
+            <ul id="historyList"></ul>
         </div>
     </div>
 
@@ -96,6 +126,25 @@
         const apiBase = "http://localhost:8080/api/User";
         const crawlApi = "http://localhost:8080/api/Crawler";
         let currentUserId = null;
+
+        function toggleVisibility(id) {
+            const section = document.getElementById(id);
+            section.classList.toggle("hidden");
+        }
+
+        function logout() {
+            currentUserId = null;
+            document.getElementById("loginSection").classList.remove("hidden");
+            document.getElementById("registerSection").classList.add("hidden");
+            document.getElementById("registerToggleBtn").classList.remove("hidden");
+            document.getElementById("profileForm").classList.add("hidden");
+            document.getElementById("featureButtons").classList.add("hidden");
+            document.getElementById("searchSection").classList.add("hidden");
+            document.getElementById("historySection").classList.add("hidden");
+            document.getElementById("profileToggleBtn").classList.add("hidden");
+            document.getElementById("logoutBtn").classList.add("hidden");
+            document.getElementById("status").innerText = "Ausgeloggt.";
+        }
 
         async function register() {
             const nickname = document.getElementById("regNick").value;
@@ -132,10 +181,12 @@
                 currentUserId = data.id;
                 document.getElementById("nickname").value = data.nickname;
                 document.getElementById("email").value = data.email;
-                document.getElementById("profileForm").style.display = "block";
-                document.getElementById("crawlBtn").style.display = "inline-block";
-                document.getElementById("historySection").style.display = "block";
-                document.getElementById("searchSection").style.display = "block";
+                document.getElementById("loginSection").classList.add("hidden");
+                document.getElementById("registerSection").classList.add("hidden");
+                document.getElementById("registerToggleBtn").classList.add("hidden");
+                document.getElementById("profileToggleBtn").classList.remove("hidden");
+                document.getElementById("featureButtons").classList.remove("hidden");
+                document.getElementById("logoutBtn").classList.remove("hidden");
                 document.getElementById("status").innerText = `Eingeloggt als ${data.nickname}`;
                 loadHistory();
             } else {

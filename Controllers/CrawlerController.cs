@@ -58,7 +58,7 @@ namespace WebCrawler.Controllers
 
         private async Task CrawlAsync(string url, int depth, HashSet<string> visited, List<string> foundPdfs)
         {
-            if (depth == 0 || visited.Contains(url) || visited.Count >= 100)
+            if (depth == 0 || visited.Contains(url) || visited.Count >= 50) // max. 50 Seiten
                 return;
 
             visited.Add(url);
