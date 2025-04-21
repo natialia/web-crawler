@@ -137,3 +137,4 @@ C:\Users\NATAG\OneDrive\Dokumente\FH Stuff\5. Sem\INNO3\WebCrawler\WebCrawler\ob
 C:\Users\NATAG\OneDrive\Dokumente\FH Stuff\5. Sem\INNO3\WebCrawler\WebCrawler\obj\Debug\net8.0\WebCrawler.pdb
 C:\Users\NATAG\OneDrive\Dokumente\FH Stuff\5. Sem\INNO3\WebCrawler\WebCrawler\obj\Debug\net8.0\WebCrawler.genruntimeconfig.cache
 C:\Users\NATAG\OneDrive\Dokumente\FH Stuff\5. Sem\INNO3\WebCrawler\WebCrawler\obj\Debug\net8.0\ref\WebCrawler.dll
+C:\Users\NATAG\OneDrive\Dokumente\FH Stuff\5. Sem\INNO3\WebCrawler\WebCrawler\bin\Debug\net8.0\HtmlAgilityPack.dll

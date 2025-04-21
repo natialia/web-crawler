@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZqlZKpOr1S1FM4NYZYfe1dLkGGEMQuLHuJOEiZZOqQQ=",
+  "Hash": "xm7hmwP9Xt6lMACmK/DnavDI/zX6iIHjXydUiHLC4sU=",
   "Source": "WebCrawler",
   "BasePath": "_content/WebCrawler",
   "Mode": "Default",
@@ -31,59 +31,14 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "dv84udfkh7",
-      "Integrity": "F9hVW0SlHUKRbAM1fFzsZoeezb35Y8ghqr9YkYuGgQE=",
+      "Fingerprint": "mbrcd97zy6",
+      "Integrity": "rskTlCG7h2S8Mr3ePnmSZSF1ccR4VVL+LMtjjwHGey0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\ui\\index.html"
     }
   ],
   "Endpoints": [
-    {
-      "Route": "ui/index.dv84udfkh7.html",
-      "AssetFile": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\ui\\index.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4651"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"F9hVW0SlHUKRbAM1fFzsZoeezb35Y8ghqr9YkYuGgQE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 21 Apr 2025 01:45:19 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "dv84udfkh7"
-        },
-        {
-          "Name": "label",
-          "Value": "ui/index.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-F9hVW0SlHUKRbAM1fFzsZoeezb35Y8ghqr9YkYuGgQE="
-        }
-      ]
-    },
     {
       "Route": "ui/index.html",
       "AssetFile": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\ui\\index.html",
@@ -95,7 +50,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4651"
+          "Value": "5685"
         },
         {
           "Name": "Content-Type",
@@ -103,11 +58,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"F9hVW0SlHUKRbAM1fFzsZoeezb35Y8ghqr9YkYuGgQE=\""
+          "Value": "\"rskTlCG7h2S8Mr3ePnmSZSF1ccR4VVL+LMtjjwHGey0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 21 Apr 2025 01:45:19 GMT"
+          "Value": "Mon, 21 Apr 2025 01:51:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -117,7 +72,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-F9hVW0SlHUKRbAM1fFzsZoeezb35Y8ghqr9YkYuGgQE="
+          "Value": "sha256-rskTlCG7h2S8Mr3ePnmSZSF1ccR4VVL+LMtjjwHGey0="
+        }
+      ]
+    },
+    {
+      "Route": "ui/index.mbrcd97zy6.html",
+      "AssetFile": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\ui\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5685"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rskTlCG7h2S8Mr3ePnmSZSF1ccR4VVL+LMtjjwHGey0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 21 Apr 2025 01:51:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mbrcd97zy6"
+        },
+        {
+          "Name": "label",
+          "Value": "ui/index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-rskTlCG7h2S8Mr3ePnmSZSF1ccR4VVL+LMtjjwHGey0="
         }
       ]
     }

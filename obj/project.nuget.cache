@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "XUrnLDuhxXY=",
+  "dgSpecHash": "LuJH7nDXc0c=",
   "success": true,
   "projectFilePath": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\WebCrawler.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\NATAG\\.nuget\\packages\\htmlagilitypack\\1.12.1\\htmlagilitypack.1.12.1.nupkg.sha512",
     "C:\\Users\\NATAG\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\NATAG\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
     "C:\\Users\\NATAG\\.nuget\\packages\\microsoft.build.framework\\17.8.3\\microsoft.build.framework.17.8.3.nupkg.sha512",
