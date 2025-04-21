@@ -21,44 +21,81 @@ namespace WebCrawler.Controllers
                     return BadRequest("URL konnte nicht aufgerufen werden.");
 
                 var visited = new HashSet<string>();
-                await CrawlAsync(url, depth, visited);
+                var foundPdfs = new List<string>();
+                await CrawlAsync(url, depth, visited, foundPdfs);
 
-                return Ok(new { Message = "Crawling abgeschlossen", Anzahl = visited.Count });
+                return Ok(new
+                {
+                    Message = "Crawling abgeschlossen",
+                    AnzahlSeiten = visited.Count,
+                    AnzahlPDFs = foundPdfs.Count,
+                    PDFLinks = foundPdfs
+                });
             }
             catch (Exception ex)
             {
                 return StatusCode(500, $"Fehler: {ex.Message}");
             }
         }
-        private async Task CrawlAsync(string url, int depth, HashSet<string> visited)
+
+        private async Task CrawlAsync(string url, int depth, HashSet<string> visited, List<string> foundPdfs)
         {
-            if (depth == 0 || visited.Contains(url)) return;
+            if (depth == 0 || visited.Contains(url) || visited.Count >= 100)
+                return;
+
             visited.Add(url);
 
             using var httpClient = new HttpClient();
-            var html = await httpClient.GetStringAsync(url);
+            httpClient.Timeout = TimeSpan.FromSeconds(5);
 
-            // HTML parsen mit HtmlAgilityPack
+            HttpResponseMessage response;
+            try
+            {
+                response = await httpClient.GetAsync(url);
+            }
+            catch
+            {
+                return;
+            }
+
+            if (!response.IsSuccessStatusCode ||
+                !(response.Content.Headers.ContentType?.MediaType?.Contains("text/html") ?? false))
+                return;
+
+            var html = await response.Content.ReadAsStringAsync();
             var doc = new HtmlAgilityPack.HtmlDocument();
             doc.LoadHtml(html);
 
             var baseUri = new Uri(url);
-            var links = doc.DocumentNode.SelectNodes("//a[@href]")
-                         ?.Select(a => a.GetAttributeValue("href", ""))
-                         ?.Where(href => href.StartsWith("http"))
-                         ?.Distinct() ?? Enumerable.Empty<string>();
+            var rawLinks = doc.DocumentNode.SelectNodes("//a[@href]") ?? new HtmlAgilityPack.HtmlNodeCollection(null);
+
+            var links = rawLinks
+                .Select(a => a.GetAttributeValue("href", ""))
+                .Select(href =>
+                {
+                    try { return new Uri(baseUri, href).ToString(); } catch { return null; }
+                })
+                .Where(link => !string.IsNullOrEmpty(link) && link.StartsWith("http"))
+                .Distinct();
 
             foreach (var link in links)
             {
+                if (link.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                {
+                    if (!foundPdfs.Contains(link))
+                        foundPdfs.Add(link);
+                }
+
                 var sameDomain = new Uri(link).Host == baseUri.Host;
                 if ((depth == 1) ||
                     (depth == 2 && sameDomain) ||
-                    (depth == 3)) // auch andere Domains
+                    (depth == 3))
                 {
-                    await CrawlAsync(link, depth - 1, visited);
+                    await CrawlAsync(link, depth - 1, visited, foundPdfs);
                 }
             }
         }
+
     }
 
 }
