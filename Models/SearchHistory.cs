@@ -9,7 +9,7 @@
         public string UserId { get; set; }
         public ApplicationUser User { get; set; }
 
-        public ICollection<PdfDocument> Pdfs { get; set; }
+        public ICollection<PdfDocument> Pdfs { get; set; } = new List<PdfDocument>();
     }
 
 }

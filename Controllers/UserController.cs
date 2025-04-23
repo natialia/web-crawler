@@ -89,6 +89,54 @@ public class UserController : ControllerBase
     }
 
     [Authorize]
+    [HttpGet("profile/pdfs")]
+    public async Task<IActionResult> GetAllUserPdfs()
+    {
+        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+        var pdfs = await _context.SearchHistories
+            .Where(h => h.UserId == userId)
+            .SelectMany(h => h.Pdfs)
+            .Select(p => new
+            {
+                p.Id,
+                p.FileName,
+                p.FilePath,
+                Date = p.SearchHistory.Date
+            })
+            .ToListAsync();
+
+        return Ok(pdfs);
+    }
+
+    [Authorize]
+    [HttpPost("profile/wordcloud")]
+    public async Task<IActionResult> GetWordcloud([FromBody] List<int> pdfIds)
+    {
+        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+        var pdfs = await _context.Pdfs
+            .Where(p => pdfIds.Contains(p.Id) && p.SearchHistory.UserId == userId)
+            .Include(p => p.WordStats)
+            .ToListAsync();
+
+        var allStats = pdfs
+            .SelectMany(p => p.WordStats)
+            .GroupBy(ws => ws.Word.ToLower())
+            .Select(g => new
+            {
+                Word = g.Key,
+                Count = g.Sum(x => x.Count)
+            })
+            .OrderByDescending(g => g.Count)
+            .Take(50)
+            .ToList();
+
+        return Ok(allStats);
+    }
+
+
+    [Authorize]
     [HttpGet("search-topword")]
     public async Task<IActionResult> SearchTopWord([FromQuery] string word)
     {
@@ -111,6 +159,7 @@ public class UserController : ControllerBase
 
         return Ok(result);
     }
+
 
     private bool IsValidEmail(string email)
     {

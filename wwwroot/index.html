@@ -110,6 +110,7 @@
             <button onclick="startCrawl()">Crawling starten</button>
             <button onclick="toggleVisibility('searchSection')">Wortsuche anzeigen</button>
             <button onclick="toggleVisibility('historySection')">Suchhistorie anzeigen</button>
+            <button onclick="toggleVisibility('wordcloudSection')">Wordcloud anzeigen</button>
         </div>
 
         <!-- SUCHEN -->
@@ -126,7 +127,17 @@
             <h2>Suchhistorie</h2>
             <ul id="historyList"></ul>
         </div>
+
+        <!-- WORDCLOUD -->
+        <div id="wordcloudSection" class="hidden">
+            <h2>Wordcloud erstellen</h2>
+            <label for="pdfSelect">Wähle PDF(s):</label>
+            <select id="pdfSelect" multiple size="5"></select>
+            <button onclick="generateWordcloud()">Wordcloud generieren</button>
+        </div>
     </div>
+
+    <canvas id="wordcloudCanvas" width="600" height="400" style="border: 1px solid #ccc; margin-top: 1rem;"></canvas>
 
     <p id="status"></p>
 
@@ -200,6 +211,7 @@
                 document.getElementById("logoutBtn").classList.remove("hidden");
                 document.getElementById("status").innerText = `Eingeloggt als ${data.nickname}`;
                 loadHistory();
+                loadUserPdfsForWordcloud();
             } else {
                 const error = await res.text();
                 document.getElementById("status").innerText = `Login fehlgeschlagen: ${error}`;
@@ -338,7 +350,75 @@
             });
         }
 
-    </script>
+        async function loadUserPdfsForWordcloud() {
+            const res = await fetch(`${apiBase}/profile/pdfs`, {
+                headers: {
+                    "Authorization": `Bearer ${token}`
+                }
+            });
 
+            if (!res.ok) {
+                document.getElementById("status").innerText = `Fehler beim Laden der PDFs: ${await res.text()}`;
+                return;
+            }
+
+            const pdfs = await res.json();
+            const select = document.getElementById("pdfSelect");
+            select.innerHTML = "";
+
+            pdfs.forEach(pdf => {
+                const option = document.createElement("option");
+                option.value = pdf.id;
+                option.textContent = `${pdf.fileName} (${new Date(pdf.date).toLocaleString()})`;
+                select.appendChild(option);
+            });
+        }
+
+        async function generateWordcloud() {
+            const select = document.getElementById("pdfSelect");
+            const selectedIds = Array.from(select.selectedOptions).map(opt => opt.value);
+
+            if (selectedIds.length === 0) {
+                document.getElementById("status").innerText = "Bitte mindestens ein PDF auswählen.";
+                return;
+            }
+
+            const res = await fetch(`${apiBase}/profile/wordcloud`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${token}`
+                },
+                body: JSON.stringify(selectedIds)
+            });
+
+            if (!res.ok) {
+                document.getElementById("status").innerText = `Fehler: ${await res.text()}`;
+                return;
+            }
+
+            const words = await res.json(); // Format: [{ word: "abc", count: 12 }, ...]
+
+            if (!words.length) {
+                document.getElementById("status").innerText = "Keine Wortstatistiken verfügbar.";
+                return;
+            }
+
+            const list = words.map(w => [w.word, w.count]);
+
+            WordCloud(document.getElementById("wordcloudCanvas"), {
+                list,
+                gridSize: 8,
+                weightFactor: 10,
+                fontFamily: 'sans-serif',
+                color: 'random-dark',
+                backgroundColor: '#fff',
+                rotateRatio: 0.2,
+            });
+
+            document.getElementById("status").innerText = `✅ Wordcloud erfolgreich generiert.`;
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/wordcloud@1.2.2/src/wordcloud2.min.js"></script>
 </body>
 </html>
