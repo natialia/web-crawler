@@ -333,10 +333,11 @@
 
             results.forEach(doc => {
                 const li = document.createElement("li");
-                li.textContent = ` ${doc.fileName} (${doc.count}x)`;
+                li.innerHTML = `<a href="${doc.filePath}" target="_blank">${doc.fileName}</a> (${doc.count}x)`;
                 list.appendChild(li);
             });
         }
+
     </script>
 
 </body>

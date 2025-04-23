@@ -88,6 +88,30 @@ public class UserController : ControllerBase
         return Ok(result);
     }
 
+    [Authorize]
+    [HttpGet("search-topword")]
+    public async Task<IActionResult> SearchTopWord([FromQuery] string word)
+    {
+        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        var lowerWord = word.ToLower();
+
+        var matchingPdfs = await _context.SearchHistories
+            .Where(h => h.UserId == userId)
+            .SelectMany(h => h.Pdfs)
+            .Include(p => p.WordStats)
+            .Where(p => p.WordStats.Any(ws => ws.Word.ToLower() == lowerWord))
+            .ToListAsync();
+
+        var result = matchingPdfs.Select(p => new
+        {
+            p.FileName,
+            p.FilePath,
+            Count = p.WordStats.First(ws => ws.Word.ToLower() == lowerWord).Count
+        });
+
+        return Ok(result);
+    }
+
     private bool IsValidEmail(string email)
     {
         try
