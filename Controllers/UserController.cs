@@ -1,6 +1,8 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 using WebCrawler.Data;
 using WebCrawler.Models;
 
@@ -19,9 +21,11 @@ public class UserController : ControllerBase
         _context = context;
     }
 
-    [HttpGet("profile/{id}")]
-    public async Task<IActionResult> GetProfile(string id)
+    [Authorize]
+    [HttpGet("profile")]
+    public async Task<IActionResult> GetProfile()
     {
+        var id = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
         var user = await _userManager.FindByIdAsync(id);
         if (user == null)
             return NotFound();
@@ -29,9 +33,11 @@ public class UserController : ControllerBase
         return Ok(new { user.Id, user.Email, user.Nickname });
     }
 
-    [HttpPut("profile/{id}")]
-    public async Task<IActionResult> UpdateProfile(string id, [FromBody] ApplicationUser updated)
+    [Authorize]
+    [HttpPut("profile")]
+    public async Task<IActionResult> UpdateProfile([FromBody] ApplicationUser updated)
     {
+        var id = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
         var user = await _userManager.FindByIdAsync(id);
         if (user == null)
             return NotFound();
@@ -39,7 +45,6 @@ public class UserController : ControllerBase
         if (!IsValidEmail(updated.Email))
             return BadRequest("Invalid email format.");
 
-        // Email-Check (nicht bei sich selbst)
         var emailOwner = await _userManager.FindByEmailAsync(updated.Email);
         if (emailOwner != null && emailOwner.Id != id)
             return Conflict("Email already in use.");
@@ -55,11 +60,13 @@ public class UserController : ControllerBase
         return NoContent();
     }
 
-    [HttpGet("profile/{id}/history")]
-    public async Task<IActionResult> GetSearchHistory(string id)
+    [Authorize]
+    [HttpGet("profile/history")]
+    public async Task<IActionResult> GetSearchHistory()
     {
+        var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
         var history = await _context.SearchHistories
-            .Where(h => h.UserId == id)
+            .Where(h => h.UserId == userId)
             .Include(h => h.Pdfs)
             .OrderByDescending(h => h.Date)
             .ToListAsync();

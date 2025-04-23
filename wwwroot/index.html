@@ -125,7 +125,9 @@
     <script>
         const apiBase = "http://localhost:8080/api/User";
         const crawlApi = "http://localhost:8080/api/Crawler";
+        const authApi = "http://localhost:8080/api/Auth";
         let currentUserId = null;
+        let token = null;
 
         function toggleVisibility(id) {
             const section = document.getElementById(id);
@@ -134,6 +136,7 @@
 
         function logout() {
             currentUserId = null;
+            token = null;
             document.getElementById("loginSection").classList.remove("hidden");
             document.getElementById("registerSection").classList.add("hidden");
             document.getElementById("registerToggleBtn").classList.remove("hidden");
@@ -151,15 +154,14 @@
             const email = document.getElementById("regMail").value;
             const password = document.getElementById("regPass").value;
 
-            const res = await fetch(`${apiBase}/register`, {
+            const res = await fetch(`http://localhost:8080/api/Auth/register`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ nickname, email, passwordHash: password })
+                body: JSON.stringify({ nickname, email, password })
             });
 
             if (res.ok) {
-                const newUser = await res.json();
-                document.getElementById("status").innerText = `Registrierung erfolgreich! Deine User-ID: ${newUser.id}`;
+                document.getElementById("status").innerText = `Registrierung erfolgreich!`;
             } else {
                 const error = await res.text();
                 document.getElementById("status").innerText = `Fehler bei Registrierung: ${error}`;
@@ -170,15 +172,16 @@
             const input = document.getElementById("loginInput").value;
             const password = document.getElementById("loginPass").value;
 
-            const res = await fetch(`${apiBase}/login`, {
+            const res = await fetch(`http://localhost:8080/api/Auth/login`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ email: input, nickname: input, password })
+                body: JSON.stringify({ emailOrNickname: input, password })
             });
 
             if (res.ok) {
                 const data = await res.json();
                 currentUserId = data.id;
+                token = data.token;
                 document.getElementById("nickname").value = data.nickname;
                 document.getElementById("email").value = data.email;
                 document.getElementById("loginSection").classList.add("hidden");
@@ -199,9 +202,12 @@
             const nickname = document.getElementById("nickname").value;
             const email = document.getElementById("email").value;
 
-            const res = await fetch(`${apiBase}/profile/${currentUserId}`, {
+            const res = await fetch(`${apiBase}/profile`, {
                 method: "PUT",
-                headers: { "Content-Type": "application/json" },
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${token}`
+                },
                 body: JSON.stringify({ nickname, email })
             });
 
@@ -217,7 +223,12 @@
             const url = prompt("Gib die Start-URL ein:");
             const depth = prompt("Gib die Tiefe (1–3) ein:") || 1;
 
-            const res = await fetch(`${crawlApi}/start?url=${encodeURIComponent(url)}&depth=${depth}&userId=${currentUserId}`);
+            const res = await fetch(`${crawlApi}/start?url=${encodeURIComponent(url)}&depth=${depth}&userId=${currentUserId}`, {
+                headers: {
+                    "Authorization": `Bearer ${token}`
+                }
+            });
+
             const result = await res.json();
 
             if (res.ok) {
@@ -229,7 +240,12 @@
         }
 
         async function loadHistory() {
-            const res = await fetch(`${apiBase}/profile/${currentUserId}/history`);
+            const res = await fetch(`${apiBase}/profile/history`, {
+                headers: {
+                    "Authorization": `Bearer ${token}`
+                }
+            });
+
             const history = await res.json();
             const list = document.getElementById("historyList");
             list.innerHTML = "";
@@ -237,13 +253,29 @@
             history.forEach(entry => {
                 const li = document.createElement("li");
                 li.textContent = `${entry.date}: ${entry.url}`;
+
+                if (entry.pdfs && entry.pdfs.length > 0) {
+                    const ul = document.createElement("ul");
+                    entry.pdfs.forEach(pdf => {
+                        const pdfLi = document.createElement("li");
+                        pdfLi.innerHTML = `<a href="${pdf.filePath}" target="_blank">${pdf.fileName}</a>`;
+                        ul.appendChild(pdfLi);
+                    });
+                    li.appendChild(ul);
+                }
+
                 list.appendChild(li);
             });
         }
 
         async function searchWordInPdfs() {
             const word = document.getElementById("searchWord").value;
-            const res = await fetch(`${apiBase}/search-topword?word=${encodeURIComponent(word)}&userId=${currentUserId}`);
+
+            const res = await fetch(`${apiBase}/search-topword?word=${encodeURIComponent(word)}`, {
+                headers: {
+                    "Authorization": `Bearer ${token}`
+                }
+            });
 
             const results = await res.json();
             const list = document.getElementById("searchResults");
@@ -261,5 +293,6 @@
             });
         }
     </script>
+
 </body>
 </html>
