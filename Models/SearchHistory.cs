@@ -1,8 +1,15 @@
-﻿public class SearchHistory
+﻿namespace WebCrawler.Models
 {
-    public int Id { get; set; }
-    public string Url { get; set; } = string.Empty;
-    public DateTime Date { get; set; } = DateTime.UtcNow;
-    public List<string> PdfLinks { get; set; } = new();
-    public int UserId { get; set; }
+    public class SearchHistory
+    {
+        public int Id { get; set; }
+        public string Url { get; set; }
+        public DateTime Date { get; set; }
+
+        public string UserId { get; set; }
+        public ApplicationUser User { get; set; }
+
+        public ICollection<PdfDocument> Pdfs { get; set; }
+    }
+
 }

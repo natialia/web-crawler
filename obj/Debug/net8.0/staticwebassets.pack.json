@@ -1,8 +1,8 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\ui\\index.html",
-      "PackagePath": "staticwebassets\\ui\\index.html"
+      "Id": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebCrawler.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

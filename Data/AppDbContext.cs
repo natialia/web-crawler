@@ -1,15 +1,16 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using WebCrawler.Models;
 
 namespace WebCrawler.Data
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext : IdentityDbContext<ApplicationUser>
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+        {
+        }
 
-        public DbSet<User> Users => Set<User>();
         public DbSet<SearchHistory> SearchHistories { get; set; }
-        public DbSet<FoundPdf> FoundPdfs => Set<FoundPdf>();
+        public DbSet<PdfDocument> Pdfs { get; set; }
     }
 }
-

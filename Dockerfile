@@ -1,27 +1,20 @@
-# Base runtime image
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-WORKDIR /app
-EXPOSE 8080
-EXPOSE 8081
-
-# Build stage
+# Build Stage mit SDK (für EF Core Migration)
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-ARG BUILD_CONFIGURATION=Release
-WORKDIR /src
-
-COPY WebCrawler.csproj ./
-RUN dotnet restore "WebCrawler.csproj"
+WORKDIR /app
 
 COPY . ./
-RUN dotnet build "WebCrawler.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
-# Publish stage
-FROM build AS publish
-ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "WebCrawler.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+# Tools installieren für EF Core CLI
+RUN dotnet tool install --global dotnet-ef
+ENV PATH="$PATH:/root/.dotnet/tools"
 
-# Final runtime image
-FROM base AS final
+RUN dotnet restore
+RUN dotnet build -c Release -o /out
+RUN dotnet publish -c Release -o /out
+
+# Laufzeit-Image
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
-COPY --from=publish /app/publish .
+COPY --from=build /out .
+
 ENTRYPOINT ["dotnet", "WebCrawler.dll"]

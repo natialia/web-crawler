@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebCrawler.Data;
+using WebCrawler.Models;
 
 namespace WebCrawler.Controllers
 {
@@ -16,7 +17,7 @@ namespace WebCrawler.Controllers
         }
 
         [HttpGet("start")]
-        public async Task<IActionResult> StartCrawl(string url, int depth = 1, int userId = 0)
+        public async Task<IActionResult> StartCrawl(string url, int depth = 1, string userId = "")
         {
             if (!Uri.IsWellFormedUriString(url, UriKind.Absolute))
                 return BadRequest("Ungültige URL.");
@@ -37,7 +38,12 @@ namespace WebCrawler.Controllers
                 {
                     Url = url,
                     Date = DateTime.UtcNow,
-                    PdfLinks = foundPdfs,
+                    Pdfs = foundPdfs.Select(f => new PdfDocument
+                    {
+                        FileName = Path.GetFileName(f),
+                        FilePath = f.ToString()
+                    }).ToList(),
+
                     UserId = userId // wird vom Frontend übergeben
                 });
 
