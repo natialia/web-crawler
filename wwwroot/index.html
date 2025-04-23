@@ -295,10 +295,11 @@
             const result = await res.json();
 
             if (res.ok) {
-                document.getElementById("status").innerText = `✅ Crawling abgeschlossen. Gefundene PDFs: ${result.anzahlPDFs || result.anzahl || 0}`;
+                document.getElementById("status").innerText = `Crawling abgeschlossen. Gefundene PDFs: ${result.anzahlPDFs || result.anzahl || 0}`;
                 loadHistory();
+                loadUserPdfsForWordcloud();
             } else {
-                document.getElementById("status").innerText = `❌ Fehler: ${await res.text()}`;
+                document.getElementById("status").innerText = `Fehler: ${await res.text()}`;
             }
         }
 
@@ -461,7 +462,7 @@
                 return;
             }
 
-            const words = await res.json(); // Format: [{ word: "abc", count: 12 }, ...]
+            const words = await res.json();
 
             if (!words.length) {
                 document.getElementById("status").innerText = "Keine Wortstatistiken im Zeitraum.";
