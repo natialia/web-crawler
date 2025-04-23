@@ -3,7 +3,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
+using System.Text.RegularExpressions;
 using WebCrawler.Data;
+using WebCrawler.DTOs;
 using WebCrawler.Models;
 
 namespace WebCrawler.Controllers;
@@ -90,13 +92,12 @@ public class UserController : ControllerBase
 
     [Authorize]
     [HttpGet("profile/pdfs")]
-    public async Task<IActionResult> GetAllUserPdfs()
+    public async Task<IActionResult> GetUserPdfs()
     {
         var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-        var pdfs = await _context.SearchHistories
-            .Where(h => h.UserId == userId)
-            .SelectMany(h => h.Pdfs)
+        var pdfs = await _context.Pdfs
+            .Where(p => p.SearchHistory.UserId == userId)
             .Select(p => new
             {
                 p.Id,
@@ -123,6 +124,35 @@ public class UserController : ControllerBase
         var allStats = pdfs
             .SelectMany(p => p.WordStats)
             .GroupBy(ws => ws.Word.ToLower())
+            .Where(g => g.Key.Length > 1 && Regex.IsMatch(g.Key, @"^[a-zA-ZäöüÄÖÜß]+$"))
+                .Select(g => new
+                {
+                    Word = g.Key,
+                    Count = g.Sum(x => x.Count)
+                })
+            .OrderByDescending(g => g.Count)
+            .Take(50)
+            .ToList();
+
+        return Ok(allStats);
+    }
+
+    [Authorize]
+    [HttpPost("profile/wordcloud/time")]
+    public async Task<IActionResult> GetWordcloudByTimeRange([FromBody] TimeRangeDto range)
+    {
+        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+        var pdfs = await _context.Pdfs
+            .Where(p => p.SearchHistory.UserId == userId &&
+                        p.SearchHistory.Date >= range.Start &&
+                        p.SearchHistory.Date <= range.End)
+            .Include(p => p.WordStats)
+            .ToListAsync();
+
+        var allStats = pdfs
+            .SelectMany(p => p.WordStats)
+            .GroupBy(ws => ws.Word.ToLower())
             .Select(g => new
             {
                 Word = g.Key,
@@ -134,7 +164,6 @@ public class UserController : ControllerBase
 
         return Ok(allStats);
     }
-
 
     [Authorize]
     [HttpGet("search-topword")]
@@ -159,7 +188,6 @@ public class UserController : ControllerBase
 
         return Ok(result);
     }
-
 
     private bool IsValidEmail(string email)
     {

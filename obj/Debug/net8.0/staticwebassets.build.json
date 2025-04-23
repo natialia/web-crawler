@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "BMc34TGxdDM9UftQkeEYl0DIM52YPQWNTvKC44CC4go=",
+  "Hash": "t4YrsGt3w1eeLmeH/CWN1bTtdNshcD4I1NpWekdgao8=",
   "Source": "WebCrawler",
   "BasePath": "_content/WebCrawler",
   "Mode": "Default",
@@ -31,200 +31,11 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "wti8hos7zp",
-      "Integrity": "rF0WpWGiUzGA1m1XIhixPWwb1FBThu8TIaKVi5zFP+c=",
+      "Fingerprint": "1slbx96bw9",
+      "Integrity": "AehQnYNW9sJcbVrrTw3qlrQ/xP5YqVQ0jSb20V7ktVE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
-    },
-    {
-      "Identity": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\Annual_Report_2022_2023_Web.pdf",
-      "SourceId": "WebCrawler",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\",
-      "BasePath": "_content/WebCrawler",
-      "RelativePath": "pdfs/Annual_Report_2022_2023_Web#[.{fingerprint}]?.pdf",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "m6w1cgiu25",
-      "Integrity": "LsUfhGG83HJ3+b3A4nzByfIeRwxVufnunRRc/2K0COI=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\pdfs\\Annual_Report_2022_2023_Web.pdf"
-    },
-    {
-      "Identity": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\Bearers-of-Internationalisation-Christoph-Hofrichter_5_16.pdf",
-      "SourceId": "WebCrawler",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\",
-      "BasePath": "_content/WebCrawler",
-      "RelativePath": "pdfs/Bearers-of-Internationalisation-Christoph-Hofrichter_5_16#[.{fingerprint}]?.pdf",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "e7jhhe0boi",
-      "Integrity": "euQR5UQOyswlCPNSznaNHjOGtF2wv4GUTxcvZveajiU=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\pdfs\\Bearers-of-Internationalisation-Christoph-Hofrichter_5_16.pdf"
-    },
-    {
-      "Identity": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\Bewerbung_Aufnahme_BA-2025-2026.pdf",
-      "SourceId": "WebCrawler",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\",
-      "BasePath": "_content/WebCrawler",
-      "RelativePath": "pdfs/Bewerbung_Aufnahme_BA-2025-2026#[.{fingerprint}]?.pdf",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "45qqon1or8",
-      "Integrity": "2Or+RC6m9wRT5yRj25OXrYvEiC5SSHglHjwiJkWcyLc=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\pdfs\\Bewerbung_Aufnahme_BA-2025-2026.pdf"
-    },
-    {
-      "Identity": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\Bewerbung_Aufnahme_MA_2025_2026.pdf",
-      "SourceId": "WebCrawler",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\",
-      "BasePath": "_content/WebCrawler",
-      "RelativePath": "pdfs/Bewerbung_Aufnahme_MA_2025_2026#[.{fingerprint}]?.pdf",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "48k1zziz7c",
-      "Integrity": "XJRQuFAR+OWVBvAJg+ToDVV7Fke0OcAHi79WBwACw4w=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\pdfs\\Bewerbung_Aufnahme_MA_2025_2026.pdf"
-    },
-    {
-      "Identity": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\EN_erasmus_student_charter.pdf",
-      "SourceId": "WebCrawler",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\",
-      "BasePath": "_content/WebCrawler",
-      "RelativePath": "pdfs/EN_erasmus_student_charter#[.{fingerprint}]?.pdf",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "1telwzk4rm",
-      "Integrity": "y/U+Aqt5HS+MH9+HDJwMhIkcOLSeOsRK9ZbrmJfjk9g=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\pdfs\\EN_erasmus_student_charter.pdf"
-    },
-    {
-      "Identity": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\Erasmus-Charter_2021-2027_fully-signed_GEF-1.pdf",
-      "SourceId": "WebCrawler",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\",
-      "BasePath": "_content/WebCrawler",
-      "RelativePath": "pdfs/Erasmus-Charter_2021-2027_fully-signed_GEF-1#[.{fingerprint}]?.pdf",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "guaslc2oxp",
-      "Integrity": "6CrHjfFTcUFAMeaynd2ZXDONy0P+V/YAgh27erhENC8=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\pdfs\\Erasmus-Charter_2021-2027_fully-signed_GEF-1.pdf"
-    },
-    {
-      "Identity": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\Erasmus-Policy-Statement_2021-2027_dt-1.pdf",
-      "SourceId": "WebCrawler",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\",
-      "BasePath": "_content/WebCrawler",
-      "RelativePath": "pdfs/Erasmus-Policy-Statement_2021-2027_dt-1#[.{fingerprint}]?.pdf",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "wdupmwlfk4",
-      "Integrity": "FMzwzJupBZtuTQ4OU9Bz1FgASHQtf60b/Cjup9/8mOk=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\pdfs\\Erasmus-Policy-Statement_2021-2027_dt-1.pdf"
-    },
-    {
-      "Identity": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\Guide_Online-Bewerbung_ab-November-2024.pdf",
-      "SourceId": "WebCrawler",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\",
-      "BasePath": "_content/WebCrawler",
-      "RelativePath": "pdfs/Guide_Online-Bewerbung_ab-November-2024#[.{fingerprint}]?.pdf",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "slezth7ffj",
-      "Integrity": "sIWf69WdeHZw276khAanb+TiD9EN/c7xRbVmIcumgHg=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\pdfs\\Guide_Online-Bewerbung_ab-November-2024.pdf"
-    },
-    {
-      "Identity": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\PRM_Newsletter_DSGVO_fin.pdf",
-      "SourceId": "WebCrawler",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\",
-      "BasePath": "_content/WebCrawler",
-      "RelativePath": "pdfs/PRM_Newsletter_DSGVO_fin#[.{fingerprint}]?.pdf",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "sso09ak3j9",
-      "Integrity": "jI7gQTkRW7VNVTvb3imf0qGRZVw0iYtGxkuQk95YBqA=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\pdfs\\PRM_Newsletter_DSGVO_fin.pdf"
     },
     {
       "Identity": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\reset-password.html",
@@ -241,14 +52,59 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "vmu4jsw8vw",
-      "Integrity": "F1c3QFUOdyY4hownMpNf11NCgvTph+pgFPw6/0TO5eg=",
+      "Fingerprint": "8msk9ddpn4",
+      "Integrity": "4Np+hZakJ4lNovtmtqiLAtyp8waY3DiNeOYd52dYKKg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\reset-password.html"
     }
   ],
   "Endpoints": [
+    {
+      "Route": "index.1slbx96bw9.html",
+      "AssetFile": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19317"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"AehQnYNW9sJcbVrrTw3qlrQ/xP5YqVQ0jSb20V7ktVE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 16:28:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1slbx96bw9"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-AehQnYNW9sJcbVrrTw3qlrQ/xP5YqVQ0jSb20V7ktVE="
+        }
+      ]
+    },
     {
       "Route": "index.html",
       "AssetFile": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\index.html",
@@ -260,7 +116,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12877"
+          "Value": "19317"
         },
         {
           "Name": "Content-Type",
@@ -268,11 +124,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"rF0WpWGiUzGA1m1XIhixPWwb1FBThu8TIaKVi5zFP+c=\""
+          "Value": "\"AehQnYNW9sJcbVrrTw3qlrQ/xP5YqVQ0jSb20V7ktVE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 13:39:51 GMT"
+          "Value": "Wed, 23 Apr 2025 16:28:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -282,13 +138,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-rF0WpWGiUzGA1m1XIhixPWwb1FBThu8TIaKVi5zFP+c="
+          "Value": "sha256-AehQnYNW9sJcbVrrTw3qlrQ/xP5YqVQ0jSb20V7ktVE="
         }
       ]
     },
     {
-      "Route": "index.wti8hos7zp.html",
-      "AssetFile": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\index.html",
+      "Route": "reset-password.8msk9ddpn4.html",
+      "AssetFile": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\reset-password.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -297,7 +153,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12877"
+          "Value": "1771"
         },
         {
           "Name": "Content-Type",
@@ -305,11 +161,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"rF0WpWGiUzGA1m1XIhixPWwb1FBThu8TIaKVi5zFP+c=\""
+          "Value": "\"4Np+hZakJ4lNovtmtqiLAtyp8waY3DiNeOYd52dYKKg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 13:39:51 GMT"
+          "Value": "Wed, 23 Apr 2025 13:47:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -319,753 +175,15 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "wti8hos7zp"
+          "Value": "8msk9ddpn4"
         },
         {
           "Name": "label",
-          "Value": "index.html"
+          "Value": "reset-password.html"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-rF0WpWGiUzGA1m1XIhixPWwb1FBThu8TIaKVi5zFP+c="
-        }
-      ]
-    },
-    {
-      "Route": "pdfs/Annual_Report_2022_2023_Web.m6w1cgiu25.pdf",
-      "AssetFile": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\Annual_Report_2022_2023_Web.pdf",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3914616"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/pdf"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"LsUfhGG83HJ3+b3A4nzByfIeRwxVufnunRRc/2K0COI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 14:28:08 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "m6w1cgiu25"
-        },
-        {
-          "Name": "label",
-          "Value": "pdfs/Annual_Report_2022_2023_Web.pdf"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-LsUfhGG83HJ3+b3A4nzByfIeRwxVufnunRRc/2K0COI="
-        }
-      ]
-    },
-    {
-      "Route": "pdfs/Annual_Report_2022_2023_Web.pdf",
-      "AssetFile": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\Annual_Report_2022_2023_Web.pdf",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3914616"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/pdf"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"LsUfhGG83HJ3+b3A4nzByfIeRwxVufnunRRc/2K0COI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 14:28:08 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-LsUfhGG83HJ3+b3A4nzByfIeRwxVufnunRRc/2K0COI="
-        }
-      ]
-    },
-    {
-      "Route": "pdfs/Bearers-of-Internationalisation-Christoph-Hofrichter_5_16.e7jhhe0boi.pdf",
-      "AssetFile": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\Bearers-of-Internationalisation-Christoph-Hofrichter_5_16.pdf",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "172690"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/pdf"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"euQR5UQOyswlCPNSznaNHjOGtF2wv4GUTxcvZveajiU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 14:28:02 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "e7jhhe0boi"
-        },
-        {
-          "Name": "label",
-          "Value": "pdfs/Bearers-of-Internationalisation-Christoph-Hofrichter_5_16.pdf"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-euQR5UQOyswlCPNSznaNHjOGtF2wv4GUTxcvZveajiU="
-        }
-      ]
-    },
-    {
-      "Route": "pdfs/Bearers-of-Internationalisation-Christoph-Hofrichter_5_16.pdf",
-      "AssetFile": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\Bearers-of-Internationalisation-Christoph-Hofrichter_5_16.pdf",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "172690"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/pdf"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"euQR5UQOyswlCPNSznaNHjOGtF2wv4GUTxcvZveajiU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 14:28:02 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-euQR5UQOyswlCPNSznaNHjOGtF2wv4GUTxcvZveajiU="
-        }
-      ]
-    },
-    {
-      "Route": "pdfs/Bewerbung_Aufnahme_BA-2025-2026.45qqon1or8.pdf",
-      "AssetFile": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\Bewerbung_Aufnahme_BA-2025-2026.pdf",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1654551"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/pdf"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"2Or+RC6m9wRT5yRj25OXrYvEiC5SSHglHjwiJkWcyLc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 14:27:59 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "45qqon1or8"
-        },
-        {
-          "Name": "label",
-          "Value": "pdfs/Bewerbung_Aufnahme_BA-2025-2026.pdf"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-2Or+RC6m9wRT5yRj25OXrYvEiC5SSHglHjwiJkWcyLc="
-        }
-      ]
-    },
-    {
-      "Route": "pdfs/Bewerbung_Aufnahme_BA-2025-2026.pdf",
-      "AssetFile": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\Bewerbung_Aufnahme_BA-2025-2026.pdf",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1654551"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/pdf"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"2Or+RC6m9wRT5yRj25OXrYvEiC5SSHglHjwiJkWcyLc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 14:27:59 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-2Or+RC6m9wRT5yRj25OXrYvEiC5SSHglHjwiJkWcyLc="
-        }
-      ]
-    },
-    {
-      "Route": "pdfs/Bewerbung_Aufnahme_MA_2025_2026.48k1zziz7c.pdf",
-      "AssetFile": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\Bewerbung_Aufnahme_MA_2025_2026.pdf",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5051581"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/pdf"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"XJRQuFAR+OWVBvAJg+ToDVV7Fke0OcAHi79WBwACw4w=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 14:27:59 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "48k1zziz7c"
-        },
-        {
-          "Name": "label",
-          "Value": "pdfs/Bewerbung_Aufnahme_MA_2025_2026.pdf"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-XJRQuFAR+OWVBvAJg+ToDVV7Fke0OcAHi79WBwACw4w="
-        }
-      ]
-    },
-    {
-      "Route": "pdfs/Bewerbung_Aufnahme_MA_2025_2026.pdf",
-      "AssetFile": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\Bewerbung_Aufnahme_MA_2025_2026.pdf",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5051581"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/pdf"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"XJRQuFAR+OWVBvAJg+ToDVV7Fke0OcAHi79WBwACw4w=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 14:27:59 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-XJRQuFAR+OWVBvAJg+ToDVV7Fke0OcAHi79WBwACw4w="
-        }
-      ]
-    },
-    {
-      "Route": "pdfs/EN_erasmus_student_charter.1telwzk4rm.pdf",
-      "AssetFile": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\EN_erasmus_student_charter.pdf",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "487847"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/pdf"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"y/U+Aqt5HS+MH9+HDJwMhIkcOLSeOsRK9ZbrmJfjk9g=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 14:28:01 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "1telwzk4rm"
-        },
-        {
-          "Name": "label",
-          "Value": "pdfs/EN_erasmus_student_charter.pdf"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-y/U+Aqt5HS+MH9+HDJwMhIkcOLSeOsRK9ZbrmJfjk9g="
-        }
-      ]
-    },
-    {
-      "Route": "pdfs/EN_erasmus_student_charter.pdf",
-      "AssetFile": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\EN_erasmus_student_charter.pdf",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "487847"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/pdf"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"y/U+Aqt5HS+MH9+HDJwMhIkcOLSeOsRK9ZbrmJfjk9g=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 14:28:01 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-y/U+Aqt5HS+MH9+HDJwMhIkcOLSeOsRK9ZbrmJfjk9g="
-        }
-      ]
-    },
-    {
-      "Route": "pdfs/Erasmus-Charter_2021-2027_fully-signed_GEF-1.guaslc2oxp.pdf",
-      "AssetFile": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\Erasmus-Charter_2021-2027_fully-signed_GEF-1.pdf",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "296677"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/pdf"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"6CrHjfFTcUFAMeaynd2ZXDONy0P+V/YAgh27erhENC8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 14:28:01 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "guaslc2oxp"
-        },
-        {
-          "Name": "label",
-          "Value": "pdfs/Erasmus-Charter_2021-2027_fully-signed_GEF-1.pdf"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-6CrHjfFTcUFAMeaynd2ZXDONy0P+V/YAgh27erhENC8="
-        }
-      ]
-    },
-    {
-      "Route": "pdfs/Erasmus-Charter_2021-2027_fully-signed_GEF-1.pdf",
-      "AssetFile": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\Erasmus-Charter_2021-2027_fully-signed_GEF-1.pdf",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "296677"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/pdf"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"6CrHjfFTcUFAMeaynd2ZXDONy0P+V/YAgh27erhENC8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 14:28:01 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-6CrHjfFTcUFAMeaynd2ZXDONy0P+V/YAgh27erhENC8="
-        }
-      ]
-    },
-    {
-      "Route": "pdfs/Erasmus-Policy-Statement_2021-2027_dt-1.pdf",
-      "AssetFile": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\Erasmus-Policy-Statement_2021-2027_dt-1.pdf",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "195102"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/pdf"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"FMzwzJupBZtuTQ4OU9Bz1FgASHQtf60b/Cjup9/8mOk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 14:28:01 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-FMzwzJupBZtuTQ4OU9Bz1FgASHQtf60b/Cjup9/8mOk="
-        }
-      ]
-    },
-    {
-      "Route": "pdfs/Erasmus-Policy-Statement_2021-2027_dt-1.wdupmwlfk4.pdf",
-      "AssetFile": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\Erasmus-Policy-Statement_2021-2027_dt-1.pdf",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "195102"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/pdf"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"FMzwzJupBZtuTQ4OU9Bz1FgASHQtf60b/Cjup9/8mOk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 14:28:01 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "wdupmwlfk4"
-        },
-        {
-          "Name": "label",
-          "Value": "pdfs/Erasmus-Policy-Statement_2021-2027_dt-1.pdf"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-FMzwzJupBZtuTQ4OU9Bz1FgASHQtf60b/Cjup9/8mOk="
-        }
-      ]
-    },
-    {
-      "Route": "pdfs/Guide_Online-Bewerbung_ab-November-2024.pdf",
-      "AssetFile": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\Guide_Online-Bewerbung_ab-November-2024.pdf",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4070213"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/pdf"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"sIWf69WdeHZw276khAanb+TiD9EN/c7xRbVmIcumgHg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 14:28:05 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-sIWf69WdeHZw276khAanb+TiD9EN/c7xRbVmIcumgHg="
-        }
-      ]
-    },
-    {
-      "Route": "pdfs/Guide_Online-Bewerbung_ab-November-2024.slezth7ffj.pdf",
-      "AssetFile": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\Guide_Online-Bewerbung_ab-November-2024.pdf",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4070213"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/pdf"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"sIWf69WdeHZw276khAanb+TiD9EN/c7xRbVmIcumgHg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 14:28:05 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "slezth7ffj"
-        },
-        {
-          "Name": "label",
-          "Value": "pdfs/Guide_Online-Bewerbung_ab-November-2024.pdf"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-sIWf69WdeHZw276khAanb+TiD9EN/c7xRbVmIcumgHg="
-        }
-      ]
-    },
-    {
-      "Route": "pdfs/PRM_Newsletter_DSGVO_fin.pdf",
-      "AssetFile": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\PRM_Newsletter_DSGVO_fin.pdf",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "365451"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/pdf"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"jI7gQTkRW7VNVTvb3imf0qGRZVw0iYtGxkuQk95YBqA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 14:28:10 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-jI7gQTkRW7VNVTvb3imf0qGRZVw0iYtGxkuQk95YBqA="
-        }
-      ]
-    },
-    {
-      "Route": "pdfs/PRM_Newsletter_DSGVO_fin.sso09ak3j9.pdf",
-      "AssetFile": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\PRM_Newsletter_DSGVO_fin.pdf",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "365451"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/pdf"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"jI7gQTkRW7VNVTvb3imf0qGRZVw0iYtGxkuQk95YBqA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 14:28:10 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "sso09ak3j9"
-        },
-        {
-          "Name": "label",
-          "Value": "pdfs/PRM_Newsletter_DSGVO_fin.pdf"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-jI7gQTkRW7VNVTvb3imf0qGRZVw0iYtGxkuQk95YBqA="
+          "Value": "sha256-4Np+hZakJ4lNovtmtqiLAtyp8waY3DiNeOYd52dYKKg="
         }
       ]
     },
@@ -1080,7 +198,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1779"
+          "Value": "1771"
         },
         {
           "Name": "Content-Type",
@@ -1088,11 +206,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"F1c3QFUOdyY4hownMpNf11NCgvTph+pgFPw6/0TO5eg=\""
+          "Value": "\"4Np+hZakJ4lNovtmtqiLAtyp8waY3DiNeOYd52dYKKg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 13:36:28 GMT"
+          "Value": "Wed, 23 Apr 2025 13:47:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1102,52 +220,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-F1c3QFUOdyY4hownMpNf11NCgvTph+pgFPw6/0TO5eg="
-        }
-      ]
-    },
-    {
-      "Route": "reset-password.vmu4jsw8vw.html",
-      "AssetFile": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\reset-password.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1779"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"F1c3QFUOdyY4hownMpNf11NCgvTph+pgFPw6/0TO5eg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 13:36:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "vmu4jsw8vw"
-        },
-        {
-          "Name": "label",
-          "Value": "reset-password.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-F1c3QFUOdyY4hownMpNf11NCgvTph+pgFPw6/0TO5eg="
+          "Value": "sha256-4Np+hZakJ4lNovtmtqiLAtyp8waY3DiNeOYd52dYKKg="
         }
       ]
     }

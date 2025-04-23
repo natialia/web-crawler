@@ -9,16 +9,13 @@ using WebCrawler.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 1. PostgreSQL-Datenbank konfigurieren
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// 2. Identity hinzufügen
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<AppDbContext>()
     .AddDefaultTokenProviders();
 
-// 3. Authentifizierung mit JWT konfigurieren
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -36,10 +33,8 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-// 4. Autorisierung aktivieren
 builder.Services.AddAuthorization();
 
-// 5. Swagger + Token Support
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo
@@ -74,15 +69,20 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
-// 6. Controller & statische Dateien
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.WebHost.UseKestrel().UseUrls("http://0.0.0.0:80");
 
 var app = builder.Build();
-app.UseDeveloperExceptionPage(); // direkt nach builder.Build()
 
-// 7. HTTP-Pipeline Middleware
+app.UseDeveloperExceptionPage();
+
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    db.Database.Migrate();
+}
+
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
@@ -90,9 +90,9 @@ app.UseSwaggerUI(c =>
     c.RoutePrefix = "swagger";
 });
 
-app.UseStaticFiles();      // wwwroot/index.html usw.
-app.UseAuthentication();   // <- WICHTIG für JWT
-app.UseAuthorization();    // <- erst NACH Authentication
+app.UseStaticFiles();
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapControllers();
 app.Run();
