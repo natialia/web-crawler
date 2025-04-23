@@ -33,20 +33,19 @@ namespace WebCrawler.Controllers
                 var visited = new HashSet<string>();
                 var foundPdfs = new List<string>();
                 await CrawlAsync(url, depth, visited, foundPdfs);
-
+                
                 _context.SearchHistories.Add(new SearchHistory
                 {
                     Url = url,
                     Date = DateTime.UtcNow,
+                    UserId = userId, // <- vom Frontend übergeben
                     Pdfs = foundPdfs.Select(f => new PdfDocument
                     {
                         FileName = Path.GetFileName(f),
-                        FilePath = f.ToString()
-                    }).ToList(),
-
-                    UserId = userId // wird vom Frontend übergeben
+                        FilePath = f
+                    }).ToList()
                 });
-
+                await _context.SaveChangesAsync();
 
                 return Ok(new
                 {

@@ -64,9 +64,10 @@ public class UserController : ControllerBase
     [HttpGet("profile/history")]
     public async Task<IActionResult> GetSearchHistory()
     {
-        var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        var id = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
         var history = await _context.SearchHistories
-            .Where(h => h.UserId == userId)
+            .Where(h => h.UserId == id)
             .Include(h => h.Pdfs)
             .OrderByDescending(h => h.Date)
             .ToListAsync();
