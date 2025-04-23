@@ -9,6 +9,8 @@ services:
       - db
     environment:
       - ConnectionStrings__Default=Host=db;Port=5432;Database=webcrawler;Username=postgres;Password=postgres
+    volumes:
+      - ./wwwroot:/app/wwwroot
 
   db:
     image: postgres:15

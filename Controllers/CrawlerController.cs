@@ -106,7 +106,26 @@ namespace WebCrawler.Controllers
                 if (link.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
                 {
                     if (!foundPdfs.Contains(link))
-                        foundPdfs.Add(link);
+                    {
+                        var folderPath = Path.Combine("wwwroot", "pdfs");
+                        Directory.CreateDirectory(folderPath); // ensure folder exists
+
+                        var filename = Path.GetFileName(new Uri(link).LocalPath);
+                        var localPath = Path.Combine(folderPath, filename);
+
+                        try
+                        {
+                            using var pdfClient = new HttpClient();
+                            var bytes = await pdfClient.GetByteArrayAsync(link);
+                            await System.IO.File.WriteAllBytesAsync(localPath, bytes);
+
+                            foundPdfs.Add($"/pdfs/{filename}"); // for frontend
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine($"Fehler beim PDF-Download: {link} – {ex.Message}");
+                        }
+                    }
                 }
 
                 var sameDomain = new Uri(link).Host == baseUri.Host;
