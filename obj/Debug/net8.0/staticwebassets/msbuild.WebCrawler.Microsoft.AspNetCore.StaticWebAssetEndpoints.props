@@ -1,16 +1,28 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAssetEndpoint Include="_content/WebCrawler/index.foxpjszwk5.html">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"foxpjszwk5"},{"Name":"integrity","Value":"sha256-QXbtnlDhKX37lT4voz9pTdJmPTRtl44yuru2kE9inwU="},{"Name":"label","Value":"_content/WebCrawler/index.html"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"10308"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022QXbtnlDhKX37lT4voz9pTdJmPTRtl44yuru2kE9inwU=\u0022"},{"Name":"Last-Modified","Value":"Tue, 22 Apr 2025 18:34:04 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/WebCrawler/index.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-QXbtnlDhKX37lT4voz9pTdJmPTRtl44yuru2kE9inwU="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"10308"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022QXbtnlDhKX37lT4voz9pTdJmPTRtl44yuru2kE9inwU=\u0022"},{"Name":"Last-Modified","Value":"Tue, 22 Apr 2025 18:34:04 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-rF0WpWGiUzGA1m1XIhixPWwb1FBThu8TIaKVi5zFP\u002Bc="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"12877"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022rF0WpWGiUzGA1m1XIhixPWwb1FBThu8TIaKVi5zFP\u002Bc=\u0022"},{"Name":"Last-Modified","Value":"Wed, 23 Apr 2025 13:39:51 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WebCrawler/index.wti8hos7zp.html">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"wti8hos7zp"},{"Name":"integrity","Value":"sha256-rF0WpWGiUzGA1m1XIhixPWwb1FBThu8TIaKVi5zFP\u002Bc="},{"Name":"label","Value":"_content/WebCrawler/index.html"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"12877"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022rF0WpWGiUzGA1m1XIhixPWwb1FBThu8TIaKVi5zFP\u002Bc=\u0022"},{"Name":"Last-Modified","Value":"Wed, 23 Apr 2025 13:39:51 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WebCrawler/reset-password.html">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\reset-password.html'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-F1c3QFUOdyY4hownMpNf11NCgvTph\u002BpgFPw6/0TO5eg="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1779"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022F1c3QFUOdyY4hownMpNf11NCgvTph\u002BpgFPw6/0TO5eg=\u0022"},{"Name":"Last-Modified","Value":"Wed, 23 Apr 2025 13:36:28 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WebCrawler/reset-password.vmu4jsw8vw.html">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\reset-password.html'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"vmu4jsw8vw"},{"Name":"integrity","Value":"sha256-F1c3QFUOdyY4hownMpNf11NCgvTph\u002BpgFPw6/0TO5eg="},{"Name":"label","Value":"_content/WebCrawler/reset-password.html"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1779"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022F1c3QFUOdyY4hownMpNf11NCgvTph\u002BpgFPw6/0TO5eg=\u0022"},{"Name":"Last-Modified","Value":"Wed, 23 Apr 2025 13:36:28 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
   </ItemGroup>
 </Project>

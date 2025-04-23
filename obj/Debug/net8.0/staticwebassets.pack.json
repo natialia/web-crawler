@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\index.html"
     },
     {
+      "Id": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\reset-password.html",
+      "PackagePath": "staticwebassets\\reset-password.html"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebCrawler.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },

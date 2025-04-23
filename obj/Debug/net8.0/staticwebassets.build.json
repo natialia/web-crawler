@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MN+7DcC69X5hTGvrBNQq72x+3yRmroBYBqlyrr+yNIg=",
+  "Hash": "slJbz/jLEbLwFjfVEUI10BlZohb6S3GX5m9xl3H21Sk=",
   "Source": "WebCrawler",
   "BasePath": "_content/WebCrawler",
   "Mode": "Default",
@@ -31,59 +31,35 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "foxpjszwk5",
-      "Integrity": "QXbtnlDhKX37lT4voz9pTdJmPTRtl44yuru2kE9inwU=",
+      "Fingerprint": "wti8hos7zp",
+      "Integrity": "rF0WpWGiUzGA1m1XIhixPWwb1FBThu8TIaKVi5zFP+c=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\reset-password.html",
+      "SourceId": "WebCrawler",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\",
+      "BasePath": "_content/WebCrawler",
+      "RelativePath": "reset-password#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vmu4jsw8vw",
+      "Integrity": "F1c3QFUOdyY4hownMpNf11NCgvTph+pgFPw6/0TO5eg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\reset-password.html"
     }
   ],
   "Endpoints": [
-    {
-      "Route": "index.foxpjszwk5.html",
-      "AssetFile": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\index.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "10308"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"QXbtnlDhKX37lT4voz9pTdJmPTRtl44yuru2kE9inwU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 22 Apr 2025 18:34:04 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "foxpjszwk5"
-        },
-        {
-          "Name": "label",
-          "Value": "index.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-QXbtnlDhKX37lT4voz9pTdJmPTRtl44yuru2kE9inwU="
-        }
-      ]
-    },
     {
       "Route": "index.html",
       "AssetFile": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\index.html",
@@ -95,7 +71,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "10308"
+          "Value": "12877"
         },
         {
           "Name": "Content-Type",
@@ -103,11 +79,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"QXbtnlDhKX37lT4voz9pTdJmPTRtl44yuru2kE9inwU=\""
+          "Value": "\"rF0WpWGiUzGA1m1XIhixPWwb1FBThu8TIaKVi5zFP+c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 22 Apr 2025 18:34:04 GMT"
+          "Value": "Wed, 23 Apr 2025 13:39:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -117,7 +93,134 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-QXbtnlDhKX37lT4voz9pTdJmPTRtl44yuru2kE9inwU="
+          "Value": "sha256-rF0WpWGiUzGA1m1XIhixPWwb1FBThu8TIaKVi5zFP+c="
+        }
+      ]
+    },
+    {
+      "Route": "index.wti8hos7zp.html",
+      "AssetFile": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12877"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rF0WpWGiUzGA1m1XIhixPWwb1FBThu8TIaKVi5zFP+c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 13:39:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wti8hos7zp"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-rF0WpWGiUzGA1m1XIhixPWwb1FBThu8TIaKVi5zFP+c="
+        }
+      ]
+    },
+    {
+      "Route": "reset-password.html",
+      "AssetFile": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\reset-password.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1779"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"F1c3QFUOdyY4hownMpNf11NCgvTph+pgFPw6/0TO5eg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 13:36:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-F1c3QFUOdyY4hownMpNf11NCgvTph+pgFPw6/0TO5eg="
+        }
+      ]
+    },
+    {
+      "Route": "reset-password.vmu4jsw8vw.html",
+      "AssetFile": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\reset-password.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1779"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"F1c3QFUOdyY4hownMpNf11NCgvTph+pgFPw6/0TO5eg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 13:36:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vmu4jsw8vw"
+        },
+        {
+          "Name": "label",
+          "Value": "reset-password.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-F1c3QFUOdyY4hownMpNf11NCgvTph+pgFPw6/0TO5eg="
         }
       ]
     }

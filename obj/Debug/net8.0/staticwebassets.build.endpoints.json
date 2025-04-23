@@ -3,51 +3,6 @@
   "ManifestType": "Build",
   "Endpoints": [
     {
-      "Route": "index.foxpjszwk5.html",
-      "AssetFile": "index.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "10308"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"QXbtnlDhKX37lT4voz9pTdJmPTRtl44yuru2kE9inwU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 22 Apr 2025 18:34:04 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "foxpjszwk5"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-QXbtnlDhKX37lT4voz9pTdJmPTRtl44yuru2kE9inwU="
-        },
-        {
-          "Name": "label",
-          "Value": "index.html"
-        }
-      ]
-    },
-    {
       "Route": "index.html",
       "AssetFile": "index.html",
       "Selectors": [],
@@ -62,7 +17,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "10308"
+          "Value": "12877"
         },
         {
           "Name": "Content-Type",
@@ -70,17 +25,144 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"QXbtnlDhKX37lT4voz9pTdJmPTRtl44yuru2kE9inwU=\""
+          "Value": "\"rF0WpWGiUzGA1m1XIhixPWwb1FBThu8TIaKVi5zFP+c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 22 Apr 2025 18:34:04 GMT"
+          "Value": "Wed, 23 Apr 2025 13:39:51 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-QXbtnlDhKX37lT4voz9pTdJmPTRtl44yuru2kE9inwU="
+          "Value": "sha256-rF0WpWGiUzGA1m1XIhixPWwb1FBThu8TIaKVi5zFP+c="
+        }
+      ]
+    },
+    {
+      "Route": "index.wti8hos7zp.html",
+      "AssetFile": "index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12877"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rF0WpWGiUzGA1m1XIhixPWwb1FBThu8TIaKVi5zFP+c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 13:39:51 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wti8hos7zp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-rF0WpWGiUzGA1m1XIhixPWwb1FBThu8TIaKVi5zFP+c="
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        }
+      ]
+    },
+    {
+      "Route": "reset-password.html",
+      "AssetFile": "reset-password.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1779"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"F1c3QFUOdyY4hownMpNf11NCgvTph+pgFPw6/0TO5eg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 13:36:28 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-F1c3QFUOdyY4hownMpNf11NCgvTph+pgFPw6/0TO5eg="
+        }
+      ]
+    },
+    {
+      "Route": "reset-password.vmu4jsw8vw.html",
+      "AssetFile": "reset-password.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1779"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"F1c3QFUOdyY4hownMpNf11NCgvTph+pgFPw6/0TO5eg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 13:36:28 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vmu4jsw8vw"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-F1c3QFUOdyY4hownMpNf11NCgvTph+pgFPw6/0TO5eg="
+        },
+        {
+          "Name": "label",
+          "Value": "reset-password.html"
         }
       ]
     }

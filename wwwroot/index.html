@@ -69,6 +69,14 @@
             <label for="loginPass">Passwort</label>
             <input type="password" id="loginPass" />
             <button onclick="login()">Login</button>
+            <p><a href="#" onclick="showForgotPassword()">Passwort vergessen?</a></p>
+        </div>
+
+        <div id="forgotPasswordSection" class="hidden">
+            <h2>Passwort vergessen</h2>
+            <label for="forgotEmail">Deine Email</label>
+            <input type="email" id="forgotEmail" />
+            <button onclick="sendResetLink()">Reset-Link anfordern</button>
         </div>
 
         <!-- REGISTRIERUNG -->
@@ -197,6 +205,35 @@
                 document.getElementById("status").innerText = `Login fehlgeschlagen: ${error}`;
             }
         }
+
+        function showForgotPassword() {
+            document.getElementById("loginSection").classList.add("hidden");
+            document.getElementById("forgotPasswordSection").classList.remove("hidden");
+        }
+
+        async function sendResetLink() {
+            const email = document.getElementById("forgotEmail").value;
+
+            const res = await fetch("http://localhost:8080/api/Auth/forgot-password", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(email)
+            });
+
+            const status = document.getElementById("status");
+
+            if (res.ok) {
+                const result = await res.json();
+                status.innerText = `🔗 Link: ${result.link}\n(Gültig bis ${new Date(result.expiry).toLocaleTimeString()})`;
+
+                document.getElementById("forgotPasswordSection").classList.add("hidden");
+                document.getElementById("loginSection").classList.remove("hidden");
+            } else {
+                const error = await res.text();
+                status.innerText = `Fehler: ${error}`;
+            }
+        }
+
 
         async function updateProfile() {
             const nickname = document.getElementById("nickname").value;

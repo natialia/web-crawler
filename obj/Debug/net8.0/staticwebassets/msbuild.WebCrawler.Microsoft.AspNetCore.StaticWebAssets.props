@@ -12,11 +12,29 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>foxpjszwk5</Fingerprint>
-      <Integrity>QXbtnlDhKX37lT4voz9pTdJmPTRtl44yuru2kE9inwU=</Integrity>
+      <Fingerprint>wti8hos7zp</Fingerprint>
+      <Integrity>rF0WpWGiUzGA1m1XIhixPWwb1FBThu8TIaKVi5zFP+c=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\reset-password.html'))">
+      <SourceType>Package</SourceType>
+      <SourceId>WebCrawler</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/WebCrawler</BasePath>
+      <RelativePath>reset-password.html</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>vmu4jsw8vw</Fingerprint>
+      <Integrity>F1c3QFUOdyY4hownMpNf11NCgvTph+pgFPw6/0TO5eg=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\reset-password.html'))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

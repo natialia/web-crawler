@@ -6,6 +6,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using WebCrawler.DTOs;
+using WebCrawler.DTOs.WebCrawler.DTOs;
 using WebCrawler.Models;
 
 namespace WebCrawler.Controllers;
@@ -84,6 +85,55 @@ public class AuthController : ControllerBase
             user.Nickname
         });
     }
+
+    private static Dictionary<string, (string Email, DateTime Expiry)> _resetTokens = new();
+
+    [HttpPost("forgot-password")]
+    public async Task<IActionResult> ForgotPassword([FromBody] string email)
+    {
+        var user = await _userManager.FindByEmailAsync(email);
+        if (user == null)
+            return NotFound("Email not registered.");
+
+        var token = Guid.NewGuid().ToString();
+        var expiry = DateTime.UtcNow.AddMinutes(1); // 60 Sekunden gültig
+
+        _resetTokens[token] = (user.Email, expiry);
+
+        // Simulierte Antwort – in echt würdest du Mail verschicken
+        return Ok(new
+        {
+            Message = "Simulierter Reset-Link erstellt.",
+            Link = $"http://localhost:8080/reset-password.html?token={token}",
+            Expiry = expiry
+        });
+    }
+
+    [HttpPost("reset-password")]
+    public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordDto dto)
+    {
+        if (!_resetTokens.ContainsKey(dto.Token))
+            return BadRequest("Ungültiger oder abgelaufener Token.");
+
+        var (email, expiry) = _resetTokens[dto.Token];
+        if (DateTime.UtcNow > expiry)
+            return BadRequest("Token ist abgelaufen.");
+
+        var user = await _userManager.FindByEmailAsync(email);
+        if (user == null)
+            return NotFound("User nicht gefunden.");
+
+        var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+        var result = await _userManager.ResetPasswordAsync(user, token, dto.NewPassword);
+
+        if (!result.Succeeded)
+            return BadRequest(result.Errors);
+
+        _resetTokens.Remove(dto.Token);
+
+        return Ok("Passwort erfolgreich zurückgesetzt.");
+    }
+
 
     private bool IsValidEmail(string email)
     {
