@@ -12,5 +12,6 @@ namespace WebCrawler.Data
 
         public DbSet<SearchHistory> SearchHistories { get; set; }
         public DbSet<PdfDocument> Pdfs { get; set; }
+        public DbSet<WordStat> WordStats { get; set; }
     }
 }

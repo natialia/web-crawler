@@ -8,6 +8,7 @@
 
         public int SearchHistoryId { get; set; }
         public SearchHistory SearchHistory { get; set; }
+        public ICollection<WordStat> WordStats { get; set; } = new List<WordStat>();
     }
 
 }

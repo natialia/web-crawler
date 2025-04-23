@@ -12,6 +12,114 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"wti8hos7zp"},{"Name":"integrity","Value":"sha256-rF0WpWGiUzGA1m1XIhixPWwb1FBThu8TIaKVi5zFP\u002Bc="},{"Name":"label","Value":"_content/WebCrawler/index.html"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"12877"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022rF0WpWGiUzGA1m1XIhixPWwb1FBThu8TIaKVi5zFP\u002Bc=\u0022"},{"Name":"Last-Modified","Value":"Wed, 23 Apr 2025 13:39:51 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WebCrawler/pdfs/Annual_Report_2022_2023_Web.m6w1cgiu25.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\pdfs\Annual_Report_2022_2023_Web.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"m6w1cgiu25"},{"Name":"integrity","Value":"sha256-LsUfhGG83HJ3\u002Bb3A4nzByfIeRwxVufnunRRc/2K0COI="},{"Name":"label","Value":"_content/WebCrawler/pdfs/Annual_Report_2022_2023_Web.pdf"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3914616"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022LsUfhGG83HJ3\u002Bb3A4nzByfIeRwxVufnunRRc/2K0COI=\u0022"},{"Name":"Last-Modified","Value":"Wed, 23 Apr 2025 14:28:08 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WebCrawler/pdfs/Annual_Report_2022_2023_Web.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\pdfs\Annual_Report_2022_2023_Web.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-LsUfhGG83HJ3\u002Bb3A4nzByfIeRwxVufnunRRc/2K0COI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3914616"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022LsUfhGG83HJ3\u002Bb3A4nzByfIeRwxVufnunRRc/2K0COI=\u0022"},{"Name":"Last-Modified","Value":"Wed, 23 Apr 2025 14:28:08 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WebCrawler/pdfs/Bearers-of-Internationalisation-Christoph-Hofrichter_5_16.e7jhhe0boi.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\pdfs\Bearers-of-Internationalisation-Christoph-Hofrichter_5_16.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"e7jhhe0boi"},{"Name":"integrity","Value":"sha256-euQR5UQOyswlCPNSznaNHjOGtF2wv4GUTxcvZveajiU="},{"Name":"label","Value":"_content/WebCrawler/pdfs/Bearers-of-Internationalisation-Christoph-Hofrichter_5_16.pdf"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"172690"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022euQR5UQOyswlCPNSznaNHjOGtF2wv4GUTxcvZveajiU=\u0022"},{"Name":"Last-Modified","Value":"Wed, 23 Apr 2025 14:28:02 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WebCrawler/pdfs/Bearers-of-Internationalisation-Christoph-Hofrichter_5_16.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\pdfs\Bearers-of-Internationalisation-Christoph-Hofrichter_5_16.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-euQR5UQOyswlCPNSznaNHjOGtF2wv4GUTxcvZveajiU="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"172690"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022euQR5UQOyswlCPNSznaNHjOGtF2wv4GUTxcvZveajiU=\u0022"},{"Name":"Last-Modified","Value":"Wed, 23 Apr 2025 14:28:02 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WebCrawler/pdfs/Bewerbung_Aufnahme_BA-2025-2026.45qqon1or8.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\pdfs\Bewerbung_Aufnahme_BA-2025-2026.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"45qqon1or8"},{"Name":"integrity","Value":"sha256-2Or\u002BRC6m9wRT5yRj25OXrYvEiC5SSHglHjwiJkWcyLc="},{"Name":"label","Value":"_content/WebCrawler/pdfs/Bewerbung_Aufnahme_BA-2025-2026.pdf"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1654551"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u00222Or\u002BRC6m9wRT5yRj25OXrYvEiC5SSHglHjwiJkWcyLc=\u0022"},{"Name":"Last-Modified","Value":"Wed, 23 Apr 2025 14:27:59 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WebCrawler/pdfs/Bewerbung_Aufnahme_BA-2025-2026.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\pdfs\Bewerbung_Aufnahme_BA-2025-2026.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-2Or\u002BRC6m9wRT5yRj25OXrYvEiC5SSHglHjwiJkWcyLc="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1654551"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u00222Or\u002BRC6m9wRT5yRj25OXrYvEiC5SSHglHjwiJkWcyLc=\u0022"},{"Name":"Last-Modified","Value":"Wed, 23 Apr 2025 14:27:59 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WebCrawler/pdfs/Bewerbung_Aufnahme_MA_2025_2026.48k1zziz7c.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\pdfs\Bewerbung_Aufnahme_MA_2025_2026.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"48k1zziz7c"},{"Name":"integrity","Value":"sha256-XJRQuFAR\u002BOWVBvAJg\u002BToDVV7Fke0OcAHi79WBwACw4w="},{"Name":"label","Value":"_content/WebCrawler/pdfs/Bewerbung_Aufnahme_MA_2025_2026.pdf"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5051581"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022XJRQuFAR\u002BOWVBvAJg\u002BToDVV7Fke0OcAHi79WBwACw4w=\u0022"},{"Name":"Last-Modified","Value":"Wed, 23 Apr 2025 14:27:59 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WebCrawler/pdfs/Bewerbung_Aufnahme_MA_2025_2026.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\pdfs\Bewerbung_Aufnahme_MA_2025_2026.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-XJRQuFAR\u002BOWVBvAJg\u002BToDVV7Fke0OcAHi79WBwACw4w="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"5051581"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022XJRQuFAR\u002BOWVBvAJg\u002BToDVV7Fke0OcAHi79WBwACw4w=\u0022"},{"Name":"Last-Modified","Value":"Wed, 23 Apr 2025 14:27:59 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WebCrawler/pdfs/EN_erasmus_student_charter.1telwzk4rm.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\pdfs\EN_erasmus_student_charter.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"1telwzk4rm"},{"Name":"integrity","Value":"sha256-y/U\u002BAqt5HS\u002BMH9\u002BHDJwMhIkcOLSeOsRK9ZbrmJfjk9g="},{"Name":"label","Value":"_content/WebCrawler/pdfs/EN_erasmus_student_charter.pdf"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"487847"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022y/U\u002BAqt5HS\u002BMH9\u002BHDJwMhIkcOLSeOsRK9ZbrmJfjk9g=\u0022"},{"Name":"Last-Modified","Value":"Wed, 23 Apr 2025 14:28:01 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WebCrawler/pdfs/EN_erasmus_student_charter.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\pdfs\EN_erasmus_student_charter.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-y/U\u002BAqt5HS\u002BMH9\u002BHDJwMhIkcOLSeOsRK9ZbrmJfjk9g="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"487847"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022y/U\u002BAqt5HS\u002BMH9\u002BHDJwMhIkcOLSeOsRK9ZbrmJfjk9g=\u0022"},{"Name":"Last-Modified","Value":"Wed, 23 Apr 2025 14:28:01 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WebCrawler/pdfs/Erasmus-Charter_2021-2027_fully-signed_GEF-1.guaslc2oxp.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\pdfs\Erasmus-Charter_2021-2027_fully-signed_GEF-1.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"guaslc2oxp"},{"Name":"integrity","Value":"sha256-6CrHjfFTcUFAMeaynd2ZXDONy0P\u002BV/YAgh27erhENC8="},{"Name":"label","Value":"_content/WebCrawler/pdfs/Erasmus-Charter_2021-2027_fully-signed_GEF-1.pdf"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"296677"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u00226CrHjfFTcUFAMeaynd2ZXDONy0P\u002BV/YAgh27erhENC8=\u0022"},{"Name":"Last-Modified","Value":"Wed, 23 Apr 2025 14:28:01 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WebCrawler/pdfs/Erasmus-Charter_2021-2027_fully-signed_GEF-1.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\pdfs\Erasmus-Charter_2021-2027_fully-signed_GEF-1.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-6CrHjfFTcUFAMeaynd2ZXDONy0P\u002BV/YAgh27erhENC8="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"296677"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u00226CrHjfFTcUFAMeaynd2ZXDONy0P\u002BV/YAgh27erhENC8=\u0022"},{"Name":"Last-Modified","Value":"Wed, 23 Apr 2025 14:28:01 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WebCrawler/pdfs/Erasmus-Policy-Statement_2021-2027_dt-1.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\pdfs\Erasmus-Policy-Statement_2021-2027_dt-1.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-FMzwzJupBZtuTQ4OU9Bz1FgASHQtf60b/Cjup9/8mOk="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"195102"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022FMzwzJupBZtuTQ4OU9Bz1FgASHQtf60b/Cjup9/8mOk=\u0022"},{"Name":"Last-Modified","Value":"Wed, 23 Apr 2025 14:28:01 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WebCrawler/pdfs/Erasmus-Policy-Statement_2021-2027_dt-1.wdupmwlfk4.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\pdfs\Erasmus-Policy-Statement_2021-2027_dt-1.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"wdupmwlfk4"},{"Name":"integrity","Value":"sha256-FMzwzJupBZtuTQ4OU9Bz1FgASHQtf60b/Cjup9/8mOk="},{"Name":"label","Value":"_content/WebCrawler/pdfs/Erasmus-Policy-Statement_2021-2027_dt-1.pdf"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"195102"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022FMzwzJupBZtuTQ4OU9Bz1FgASHQtf60b/Cjup9/8mOk=\u0022"},{"Name":"Last-Modified","Value":"Wed, 23 Apr 2025 14:28:01 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WebCrawler/pdfs/Guide_Online-Bewerbung_ab-November-2024.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\pdfs\Guide_Online-Bewerbung_ab-November-2024.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-sIWf69WdeHZw276khAanb\u002BTiD9EN/c7xRbVmIcumgHg="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"4070213"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022sIWf69WdeHZw276khAanb\u002BTiD9EN/c7xRbVmIcumgHg=\u0022"},{"Name":"Last-Modified","Value":"Wed, 23 Apr 2025 14:28:05 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WebCrawler/pdfs/Guide_Online-Bewerbung_ab-November-2024.slezth7ffj.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\pdfs\Guide_Online-Bewerbung_ab-November-2024.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"slezth7ffj"},{"Name":"integrity","Value":"sha256-sIWf69WdeHZw276khAanb\u002BTiD9EN/c7xRbVmIcumgHg="},{"Name":"label","Value":"_content/WebCrawler/pdfs/Guide_Online-Bewerbung_ab-November-2024.pdf"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"4070213"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022sIWf69WdeHZw276khAanb\u002BTiD9EN/c7xRbVmIcumgHg=\u0022"},{"Name":"Last-Modified","Value":"Wed, 23 Apr 2025 14:28:05 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WebCrawler/pdfs/PRM_Newsletter_DSGVO_fin.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\pdfs\PRM_Newsletter_DSGVO_fin.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-jI7gQTkRW7VNVTvb3imf0qGRZVw0iYtGxkuQk95YBqA="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"365451"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022jI7gQTkRW7VNVTvb3imf0qGRZVw0iYtGxkuQk95YBqA=\u0022"},{"Name":"Last-Modified","Value":"Wed, 23 Apr 2025 14:28:10 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WebCrawler/pdfs/PRM_Newsletter_DSGVO_fin.sso09ak3j9.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\pdfs\PRM_Newsletter_DSGVO_fin.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"sso09ak3j9"},{"Name":"integrity","Value":"sha256-jI7gQTkRW7VNVTvb3imf0qGRZVw0iYtGxkuQk95YBqA="},{"Name":"label","Value":"_content/WebCrawler/pdfs/PRM_Newsletter_DSGVO_fin.pdf"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"365451"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022jI7gQTkRW7VNVTvb3imf0qGRZVw0iYtGxkuQk95YBqA=\u0022"},{"Name":"Last-Modified","Value":"Wed, 23 Apr 2025 14:28:10 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/WebCrawler/reset-password.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\reset-password.html'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>

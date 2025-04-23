@@ -2,6 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using WebCrawler.Data;
 using WebCrawler.Models;
+using UglyToad.PdfPig;
+using System.Net.Http;
+using PdfModel = WebCrawler.Models.PdfDocument;
 
 namespace WebCrawler.Controllers
 {
@@ -31,20 +34,18 @@ namespace WebCrawler.Controllers
                     return BadRequest("URL konnte nicht aufgerufen werden.");
 
                 var visited = new HashSet<string>();
-                var foundPdfs = new List<string>();
+                var foundPdfs = new List<PdfModel>();
                 await CrawlAsync(url, depth, visited, foundPdfs);
-                
-                _context.SearchHistories.Add(new SearchHistory
+
+                var history = new SearchHistory
                 {
                     Url = url,
                     Date = DateTime.UtcNow,
-                    UserId = userId, // <- vom Frontend übergeben
-                    Pdfs = foundPdfs.Select(f => new PdfDocument
-                    {
-                        FileName = Path.GetFileName(f),
-                        FilePath = f
-                    }).ToList()
-                });
+                    UserId = userId,
+                    Pdfs = foundPdfs
+                };
+
+                _context.SearchHistories.Add(history);
                 await _context.SaveChangesAsync();
 
                 return Ok(new
@@ -52,7 +53,7 @@ namespace WebCrawler.Controllers
                     Message = "Crawling abgeschlossen",
                     AnzahlSeiten = visited.Count,
                     AnzahlPDFs = foundPdfs.Count,
-                    PDFLinks = foundPdfs
+                    PDFLinks = foundPdfs.Select(p => p.FilePath)
                 });
             }
             catch (Exception ex)
@@ -61,9 +62,9 @@ namespace WebCrawler.Controllers
             }
         }
 
-        private async Task CrawlAsync(string url, int depth, HashSet<string> visited, List<string> foundPdfs)
+        private async Task CrawlAsync(string url, int depth, HashSet<string> visited, List<PdfModel> foundPdfs)
         {
-            if (depth == 0 || visited.Contains(url) || visited.Count >= 50) // max. 50 Seiten
+            if (depth == 0 || visited.Contains(url) || visited.Count >= 25)
                 return;
 
             visited.Add(url);
@@ -105,12 +106,12 @@ namespace WebCrawler.Controllers
             {
                 if (link.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
                 {
-                    if (!foundPdfs.Contains(link))
+                    var filename = Path.GetFileName(new Uri(link).LocalPath);
+                    var relativePath = $"/pdfs/{filename}";
+                    if (!foundPdfs.Any(p => p.FilePath == relativePath))
                     {
                         var folderPath = Path.Combine("wwwroot", "pdfs");
-                        Directory.CreateDirectory(folderPath); // ensure folder exists
-
-                        var filename = Path.GetFileName(new Uri(link).LocalPath);
+                        Directory.CreateDirectory(folderPath);
                         var localPath = Path.Combine(folderPath, filename);
 
                         try
@@ -119,11 +120,25 @@ namespace WebCrawler.Controllers
                             var bytes = await pdfClient.GetByteArrayAsync(link);
                             await System.IO.File.WriteAllBytesAsync(localPath, bytes);
 
-                            foundPdfs.Add($"/pdfs/{filename}"); // for frontend
+                            var text = ExtractTextFromPdf(localPath);
+                            var topWords = GetTop10Words(text);
+
+                            var pdfDoc = new PdfModel
+                            {
+                                FileName = filename,
+                                FilePath = relativePath,
+                                WordStats = topWords.Select(w => new WordStat
+                                {
+                                    Word = w.Key,
+                                    Count = w.Value
+                                }).ToList()
+                            };
+
+                            foundPdfs.Add(pdfDoc);
                         }
                         catch (Exception ex)
                         {
-                            Console.WriteLine($"Fehler beim PDF-Download: {link} – {ex.Message}");
+                            Console.WriteLine($"Fehler beim PDF-Download/Textanalyse: {ex.Message}");
                         }
                     }
                 }
@@ -138,6 +153,23 @@ namespace WebCrawler.Controllers
             }
         }
 
-    }
+        private string ExtractTextFromPdf(string path)
+        {
+            using var pdf = UglyToad.PdfPig.PdfDocument.Open(path);
+            return string.Join(" ", pdf.GetPages().Select(p => p.Text));
+        }
 
+        private Dictionary<string, int> GetTop10Words(string text)
+        {
+            return text
+                .ToLower()
+                .Split(new[] { ' ', '\n', '\r', ',', '.', '!', '?', ';', ':', '(', ')', '[', ']', '{', '}', '"', '\'' }, StringSplitOptions.RemoveEmptyEntries)
+                .Where(w => w.Length > 3)
+                .GroupBy(w => w)
+                .Select(g => new { Word = g.Key, Count = g.Count() })
+                .OrderByDescending(g => g.Count)
+                .Take(10)
+                .ToDictionary(g => g.Word, g => g.Count);
+        }
+    }
 }

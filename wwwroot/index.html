@@ -224,7 +224,7 @@
 
             if (res.ok) {
                 const result = await res.json();
-                status.innerText = `🔗 Link: ${result.link}\n(Gültig bis ${new Date(result.expiry).toLocaleTimeString()})`;
+                status.innerText = `Link: ${result.link}\n(Gültig bis ${new Date(result.expiry).toLocaleTimeString()})`;
 
                 document.getElementById("forgotPasswordSection").classList.add("hidden");
                 document.getElementById("loginSection").classList.remove("hidden");
@@ -296,6 +296,14 @@
                     entry.pdfs.forEach(pdf => {
                         const pdfLi = document.createElement("li");
                         pdfLi.innerHTML = `<a href="${pdf.filePath}" target="_blank">${pdf.fileName}</a>`;
+
+                        if (pdf.wordStats && pdf.wordStats.length > 0) {
+                            const words = pdf.wordStats
+                                .map(ws => `${ws.word} (${ws.count})`)
+                                .join(", ");
+                            pdfLi.innerHTML += `<br/>Top-Wörter: ${words}`;
+                        }
+
                         ul.appendChild(pdfLi);
                     });
                     li.appendChild(ul);

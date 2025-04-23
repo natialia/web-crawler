@@ -5,6 +5,42 @@
       "PackagePath": "staticwebassets\\index.html"
     },
     {
+      "Id": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\Annual_Report_2022_2023_Web.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\Annual_Report_2022_2023_Web.pdf"
+    },
+    {
+      "Id": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\Bearers-of-Internationalisation-Christoph-Hofrichter_5_16.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\Bearers-of-Internationalisation-Christoph-Hofrichter_5_16.pdf"
+    },
+    {
+      "Id": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\Bewerbung_Aufnahme_BA-2025-2026.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\Bewerbung_Aufnahme_BA-2025-2026.pdf"
+    },
+    {
+      "Id": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\Bewerbung_Aufnahme_MA_2025_2026.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\Bewerbung_Aufnahme_MA_2025_2026.pdf"
+    },
+    {
+      "Id": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\EN_erasmus_student_charter.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\EN_erasmus_student_charter.pdf"
+    },
+    {
+      "Id": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\Erasmus-Charter_2021-2027_fully-signed_GEF-1.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\Erasmus-Charter_2021-2027_fully-signed_GEF-1.pdf"
+    },
+    {
+      "Id": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\Erasmus-Policy-Statement_2021-2027_dt-1.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\Erasmus-Policy-Statement_2021-2027_dt-1.pdf"
+    },
+    {
+      "Id": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\Guide_Online-Bewerbung_ab-November-2024.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\Guide_Online-Bewerbung_ab-November-2024.pdf"
+    },
+    {
+      "Id": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\pdfs\\PRM_Newsletter_DSGVO_fin.pdf",
+      "PackagePath": "staticwebassets\\pdfs\\PRM_Newsletter_DSGVO_fin.pdf"
+    },
+    {
       "Id": "C:\\Users\\NATAG\\OneDrive\\Dokumente\\FH Stuff\\5. Sem\\INNO3\\WebCrawler\\WebCrawler\\wwwroot\\reset-password.html",
       "PackagePath": "staticwebassets\\reset-password.html"
     },

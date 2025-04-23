@@ -69,6 +69,7 @@ public class UserController : ControllerBase
         var history = await _context.SearchHistories
             .Where(h => h.UserId == id)
             .Include(h => h.Pdfs)
+                .ThenInclude(p => p.WordStats)
             .OrderByDescending(h => h.Date)
             .ToListAsync();
 
@@ -76,7 +77,12 @@ public class UserController : ControllerBase
         {
             h.Url,
             h.Date,
-            Pdfs = h.Pdfs.Select(p => new { p.FileName, p.FilePath })
+            Pdfs = h.Pdfs.Select(p => new
+            {
+                p.FileName,
+                p.FilePath,
+                WordStats = p.WordStats.Select(w => new { w.Word, w.Count })
+            })
         });
 
         return Ok(result);

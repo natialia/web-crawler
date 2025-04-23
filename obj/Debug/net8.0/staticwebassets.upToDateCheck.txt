@@ -1,2 +1,0 @@
-wwwroot\index.html
-wwwroot\reset-password.html
