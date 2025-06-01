@@ -44,7 +44,7 @@ Falls noch nicht eingerichtet, PostgreSQL via Docker starten:
 
 ## 4. Swagger
 
-Die Ednpoints sind über http://localhost:8080/swagger erreichbar.
+Die Endpoints sind über http://localhost:8080/swagger erreichbar.
 
 
 ## Beispiel-API-Endpunkte
@@ -67,4 +67,3 @@ POST /api/User/profile/wordcloud/time – Wordcloud aus Zeitintervall
 
 - Die Anwendung speichert persönliche Crawling-Daten und PDF-Wortstatistiken nutzerspezifisch.
 - Alle verwendeten Bibliotheken sind Open Source.
-- Keine SQLite-Unterstützung – ausschließlich PostgreSQL via Docker.
