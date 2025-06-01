@@ -1,4 +1,14 @@
 services:
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: webcrawler
+    ports:
+      - "5432:5432"
+
   api:
     build:
       context: .
@@ -11,13 +21,3 @@ services:
       - ConnectionStrings__Default=Host=db;Port=5432;Database=webcrawler;Username=postgres;Password=postgres
     volumes:
       - ./wwwroot:/app/wwwroot
-
-  db:
-    image: postgres:15
-    restart: always
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: webcrawler
-    ports:
-      - "5432:5432"
