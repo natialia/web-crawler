@@ -17,6 +17,7 @@ services:
       - "8080:80"
     depends_on:
       - db
+    restart: on-failure
     environment:
       - ConnectionStrings__Default=Host=db;Port=5432;Database=webcrawler;Username=postgres;Password=postgres
     volumes:
